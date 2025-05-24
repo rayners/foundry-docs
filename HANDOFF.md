@@ -1,60 +1,36 @@
 # Handoff Document - FOU-37
 
 ## Current Status
-Working on: **FOU-37 - Set up GitHub Pages repository and domain configuration**
+Working on: **FOU-38 - Choose and configure static site generator**
 
-### Completed Steps ✅
+### Previous Issue Completed: FOU-37 ✅
+All tasks completed:
 1. Created GitHub repository: `rayners/foundry-docs`
-2. Cloned repository locally
-3. Created initial directory structure:
-   ```
-   /
-   ├── index.html              # Main landing page (created)
-   ├── journeys-and-jamborees/ # J&J module docs
-   │   └── index.html         # Placeholder page (created)
-   ├── argon-dragonbane/      # ARGON module docs
-   │   └── index.html         # Placeholder page (created)
-   ├── _layouts/              # Site templates (empty dir)
-   ├── _includes/             # Reusable components (empty dir)
-   ├── assets/                # CSS, JS, images
-   │   ├── css/              # (empty dir)
-   │   ├── js/               # (empty dir)
-   │   └── images/           # (empty dir)
-   ├── 404.html              # 404 error page (created)
-   ├── CNAME                 # Contains: docs.rayners.dev
-   └── _config.yml           # Jekyll configuration (created)
-   ```
+2. Created initial directory structure with placeholder HTML
+3. Committed and pushed initial files
+4. Enabled GitHub Pages (status: built)
+5. Configured DNS CNAME record
+6. Updated nameservers (waiting for propagation)
 
-### Next Steps 📋
-1. **Commit and push initial files**
-   ```bash
-   git add -A
-   git commit -m "Initial documentation site setup
+### FOU-38 Next Steps 📋
+1. **Research SSG Options**
+   - Jekyll (GitHub Pages default)
+   - Docusaurus (modern, documentation-focused)
+   - VitePress (fast, Vue-based)
+   - Nextra (Next.js based)
 
-   - Add landing page with module cards
-   - Create placeholder pages for J&J and ARGON modules
-   - Add 404 page
-   - Configure Jekyll and custom domain
+2. **Make Selection Based On**:
+   - GitHub Pages compatibility
+   - Multi-module support
+   - Search functionality
+   - Theme quality
+   - Build speed
 
-   Addresses FOU-37"
-   git push origin main
-   ```
-
-2. **Enable GitHub Pages**
-   - Go to: https://github.com/rayners/foundry-docs/settings/pages
-   - Source: Deploy from a branch
-   - Branch: main
-   - Folder: / (root)
-   - Click Save
-
-3. **Configure DNS** (user needs to do this)
-   - Add CNAME record: `docs` → `rayners.github.io`
-   - Wait for DNS propagation (5-30 minutes)
-
-4. **Verify deployment**
-   - Check GitHub Pages settings for green checkmark
-   - Visit https://docs.rayners.dev
-   - Verify HTTPS is working
+3. **Implementation**:
+   - Install chosen SSG
+   - Migrate HTML content
+   - Configure navigation
+   - Set up build process
 
 ## Linear Context
 - Issue: FOU-37 (In Progress)
