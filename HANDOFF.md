@@ -1,36 +1,35 @@
 # Handoff Document - FOU-37
 
 ## Current Status
-Working on: **FOU-38 - Choose and configure static site generator**
+Working on: **FOU-39 - Migrate J&J documentation to docs site**
 
-### Previous Issue Completed: FOU-37 ✅
-All tasks completed:
-1. Created GitHub repository: `rayners/foundry-docs`
-2. Created initial directory structure with placeholder HTML
-3. Committed and pushed initial files
-4. Enabled GitHub Pages (status: built)
-5. Configured DNS CNAME record
-6. Updated nameservers (waiting for propagation)
+### Previous Issues Completed: 
+- FOU-37 ✅ - GitHub Pages setup and domain configuration
+- FOU-38 ✅ - Docusaurus implementation
 
-### FOU-38 Next Steps 📋
-1. **Research SSG Options**
-   - Jekyll (GitHub Pages default)
-   - Docusaurus (modern, documentation-focused)
-   - VitePress (fast, Vue-based)
-   - Nextra (Next.js based)
+### Completed in FOU-38:
+1. Selected and installed Docusaurus v3
+2. Configured multi-instance docs for module separation
+3. Created custom landing page with module cards
+4. Set up sidebar configurations for each module
+5. Added initial documentation files
+6. Pushed changes (workflow file needs manual addition)
 
-2. **Make Selection Based On**:
-   - GitHub Pages compatibility
-   - Multi-module support
-   - Search functionality
-   - Theme quality
-   - Build speed
+### FOU-39 Next Steps 📋
+1. **Content Migration**
+   - Copy README content to main module page
+   - Migrate User Guide to docs site structure
+   - Move Localization Guide with proper formatting
+   - Adapt CONTRIBUTING content for docs site
 
-3. **Implementation**:
-   - Install chosen SSG
-   - Migrate HTML content
-   - Configure navigation
-   - Set up build process
+2. **Site Structure**:
+   - Complete `/journeys-and-jamborees/` section
+   - Add all missing documentation pages
+   - Update internal links and references
+
+3. **Module Repository Updates**:
+   - Update J&J README to link to docs site
+   - Add docs site reference to module.json
 
 ## Linear Context
 - Issue: FOU-37 (In Progress)

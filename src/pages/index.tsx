@@ -77,13 +77,13 @@ export default function Home(): ReactNode {
                 title="Journeys & Jamborees"
                 description="Comprehensive party management module featuring shared resources, travel mechanics, and collaborative inventory management."
                 link="/journeys-and-jamborees/intro"
-                status="stable"
+                status="development"
               />
               <ModuleCard
                 title="ARGON Dragonbane"
                 description="Enhanced Dragonbane RPG system support with quality-of-life improvements and additional features."
                 link="/argon-dragonbane/intro"
-                status="development"
+                status="stable"
               />
             </div>
           </div>
