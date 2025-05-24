@@ -87,3 +87,86 @@ Before deploying:
 2. Test with `npm run serve` to verify production build
 3. Check all internal links work correctly
 4. Verify module navigation is functional
+
+## Current Project Status
+
+### Completed Issues
+- **FOU-37** ✅ - GitHub Pages setup and domain configuration
+- **FOU-38** ✅ - Docusaurus implementation with custom theme
+
+### In Progress
+- **FOU-39** - Migrate J&J documentation to docs site
+  - Copy README content to main module page
+  - Migrate User Guide to docs site structure
+  - Move Localization Guide with proper formatting
+  - Update J&J README to link to docs site
+
+### Upcoming
+- **FOU-40** - Set up automated builds and deployment
+- **FOU-41** - Create landing page and multi-module navigation
+- **FOU-43** - Create comprehensive documentation for ARGON Dragonbane
+
+### Recent Changes (2025-05-23)
+- Applied slate gray theme with purple/blue accent colors
+- Fixed module status badges (J&J: development, ARGON: stable)
+- Created placeholder documentation to prevent sidebar errors
+- Added comprehensive quick start and installation guides for J&J
+- Updated ARGON intro to reflect it's been released for over a year
+
+## GitHub Actions Workflow
+
+The workflow file (`deploy.yml`) needs to be manually added to `.github/workflows/` due to OAuth permissions:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build Docusaurus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build website
+        run: npm run build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
