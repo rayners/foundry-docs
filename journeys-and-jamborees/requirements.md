@@ -8,20 +8,24 @@ title: Requirements
 ## Foundry VTT Version
 
 Journeys & Jamborees requires:
-- **Minimum**: Foundry VTT v11.0.0
-- **Recommended**: Foundry VTT v11.315 or higher
-- **Verified**: Foundry VTT v12 compatible
+- **Minimum**: Foundry VTT v13.0.0
+- **Recommended**: Latest Foundry VTT v13 release
 
 ## Game System Compatibility
 
-The module is **system-agnostic** and works with:
+Currently, the module requires:
+- **Dragonbane (Drakar och Demoner)** game system v1.0.0 or later
+
+### Future Compatibility
+The module is being designed with system-agnostic support in mind. Future releases will support:
 - D&D 5th Edition
 - Pathfinder 2e
-- Dragonbane
-- And most other game systems
+- Other popular game systems
 
-Special integration is provided for:
-- **Dragonbane**: Automatic movement calculation (15km on foot, 30km mounted)
+Special integration features for Dragonbane:
+- **Automatic movement calculation**: 15km on foot, 30km mounted
+- **Resource consumption**: Based on Dragonbane travel rules
+- **Rest mechanics**: Integrated with Dragonbane's rest system
 
 ## Browser Requirements
 
