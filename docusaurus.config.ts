@@ -106,11 +106,11 @@ const config: Config = {
           items: [
             {
               label: 'Journeys & Jamborees',
-              to: '/journeys-and-jamborees',
+              to: '/journeys-and-jamborees/intro',
             },
             {
               label: 'ARGON Dragonbane',
-              to: '/argon-dragonbane',
+              to: '/argon-dragonbane/intro',
             },
           ],
         },

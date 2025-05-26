@@ -1,6 +1,6 @@
-# Claude Memory File for Foundry Docs
+# CLAUDE.md
 
-This file contains important information and patterns to remember when working on the documentation site.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -8,10 +8,12 @@ This is the centralized documentation site for Foundry VTT modules, hosted at ht
 
 ## Technology Stack
 
-- **Static Site Generator**: Docusaurus v3 with TypeScript
+- **Static Site Generator**: Docusaurus v3.7.0 with TypeScript
+- **React**: v19.0.0 with MDX support
+- **TypeScript**: v5.6.2
+- **Node.js**: Requires v18.0 or higher
 - **Hosting**: GitHub Pages with custom domain
 - **Deployment**: GitHub Actions workflow (automated)
-- **Search**: Planned - either Algolia or local search plugin
 
 ## Site Structure
 
@@ -30,15 +32,20 @@ This is the centralized documentation site for Foundry VTT modules, hosted at ht
 
 Each module has its own documentation instance configured in `docusaurus.config.ts`:
 - Separate routing (`/journeys-and-jamborees`, `/argon-dragonbane`)
-- Independent sidebars
-- Module-specific navigation items
+- Independent sidebars configured in `sidebars-jj.ts` and `sidebars-argon.ts`
+- Module-specific navigation items in the navbar
+- Custom theme with module-specific accent colors (purple for J&J, red for ARGON)
+- Default docs and blog plugins are disabled
 
 ## Development Commands
 
 ```bash
-npm start       # Start development server
-npm run build   # Build for production
-npm run serve   # Serve production build locally
+npm start         # Start development server on http://localhost:3000
+npm run build     # Build for production (outputs to ./build)
+npm run serve     # Serve production build locally
+npm run clear     # Clear Docusaurus cache
+npm run typecheck # Run TypeScript type checking
+npm run deploy    # Deploy using Docusaurus (not typically used - we use GitHub Actions)
 ```
 
 ## Deployment
@@ -68,10 +75,12 @@ To add a new module:
 - Add images to `/static/img/` directory
 - Keep a consistent structure across modules
 
-## Known Issues
+## Architecture Notes
 
-- Default blog and docs directories from Docusaurus template need removal
-- GitHub Actions workflow requires manual addition due to OAuth limitations
+- The site uses custom Docusaurus plugin instances for each module rather than the default docs plugin
+- Each module maintains its own documentation directory with markdown files
+- The landing page (`src/pages/index.tsx`) displays module cards with status badges
+- Custom CSS in `src/css/custom.css` implements the slate gray theme with hover effects
 
 ## Linear Integration
 
@@ -83,10 +92,12 @@ Documentation work is tracked in Linear:
 ## Testing and Validation
 
 Before deploying:
-1. Run `npm run build` to ensure no build errors
-2. Test with `npm run serve` to verify production build
-3. Check all internal links work correctly
-4. Verify module navigation is functional
+1. Run `npm run typecheck` to check TypeScript types
+2. Run `npm run build` to ensure no build errors
+3. Test with `npm run serve` to verify production build
+4. Check all internal links work correctly
+5. Verify module navigation is functional
+6. Ensure all documentation files have proper frontmatter for sidebar positioning
 
 ## Current Project Status
 
@@ -106,12 +117,17 @@ Before deploying:
 - **FOU-41** - Create landing page and multi-module navigation
 - **FOU-43** - Create comprehensive documentation for ARGON Dragonbane
 
-### Recent Changes (2025-05-23)
-- Applied slate gray theme with purple/blue accent colors
-- Fixed module status badges (J&J: development, ARGON: stable)
-- Created placeholder documentation to prevent sidebar errors
-- Added comprehensive quick start and installation guides for J&J
-- Updated ARGON intro to reflect it's been released for over a year
+## Module Documentation Status
+
+### Journeys and Jamborees (`/journeys-and-jamborees`)
+- Status: Development (purple badge)
+- 11 documentation files covering installation, quick start, API reference, etc.
+- Comprehensive travel system and party management documentation
+
+### ARGON Dragonbane (`/argon-dragonbane`)
+- Status: Stable (red badge)
+- Basic documentation with intro, requirements, and installation
+- Released for over a year, needs expanded documentation (FOU-43)
 
 ## GitHub Actions Workflow
 

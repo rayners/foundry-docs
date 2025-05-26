@@ -5,40 +5,33 @@ title: Contributing
 
 # Contributing to Journeys & Jamborees
 
-Thank you for your interest in contributing! This guide explains how you can help improve J&J.
+Thank you for your interest in contributing to Journeys & Jamborees! We welcome community involvement.
 
-:::warning Alpha Status
-This project is in early alpha and not currently accepting code contributions. The core architecture is still being established.
+:::info Alpha Status
+This project is in ALPHA stage. We accept bug reports, testing feedback, documentation improvements, and case-by-case code contributions.
 :::
 
 ## Current Contribution Status
 
 | Type | Status | Notes |
 |------|--------|-------|
-| **Bug Reports** | ✅ Accepting | Via GitHub Issues |
-| **Testing Feedback** | ✅ Accepting | Especially edge cases |
+| **Bug Reports** | ✅ Accepting | Use our [bug report template](https://github.com/rayners/fvtt-journeys-and-jamborees/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) |
+| **Feature Requests** | ✅ Accepting | Use our [feature request template](https://github.com/rayners/fvtt-journeys-and-jamborees/blob/main/.github/ISSUE_TEMPLATE/feature_request.md) |
+| **Testing Feedback** | ✅ Accepting | Especially across different game systems |
+| **Documentation** | ✅ Accepting | Improvements and examples welcome |
 | **Translations** | ✅ Accepting | See [Localization Guide](localization) |
-| **Feature PRs** | ❌ Not Yet | Core architecture in flux |
-| **Feature Ideas** | ⚠️ Limited | Most features planned |
+| **Code PRs** | ⚠️ Case-by-case | Please discuss first |
 
-## How to Help Now
+## Quick Start
 
 ### 🐛 Report Bugs
 
-Found something broken? Help us fix it:
+Use our structured [bug report template](https://github.com/rayners/fvtt-journeys-and-jamborees/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) which includes:
 
-1. **Check existing issues** to avoid duplicates
-2. **Create a detailed report** including:
-   - Clear problem description
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Environment details:
-     - Foundry VTT version
-     - Dragonbane system version
-     - Browser and OS
-     - Other active modules
-   - Console errors (F12 → Console tab)
-   - Screenshots if applicable
+- Multi-system support (Dragonbane, D&D 5e, Pathfinder 2e, etc.)
+- Environment details checklist
+- Console error collection
+- Reproduction steps format
 
 #### Good Bug Report Example
 
@@ -88,10 +81,15 @@ Be an early adopter and help us improve:
 - [ ] Test with multiple players
 - [ ] Try breaking things creatively!
 
-### 💡 Share Ideas (Carefully)
+### 💡 Request Features
 
-While the roadmap is largely set, we welcome:
+Use our [feature request template](https://github.com/rayners/fvtt-journeys-and-jamborees/blob/main/.github/ISSUE_TEMPLATE/feature_request.md) which includes:
 
+- Game system compatibility checklist
+- Integration considerations
+- Use case descriptions
+
+We welcome:
 - **UX improvements** - Better workflows
 - **Integration ideas** - Other module compatibility
 - **Creative uses** - Unexpected applications
@@ -109,9 +107,23 @@ Help make J&J accessible worldwide:
 - No coding required
 - Full credit given
 
-## Future Contribution Process
+## Getting Started with Code Contributions
 
-Once we reach beta status, contributions will be welcome!
+For code contributions, please review our comprehensive documentation:
+
+### 📚 Essential Documents
+
+- **[Contributing Guide](https://github.com/rayners/fvtt-journeys-and-jamborees/blob/main/CONTRIBUTING.md)** - Complete development workflow
+- **[Security Policy](https://github.com/rayners/fvtt-journeys-and-jamborees/blob/main/SECURITY.md)** - Vulnerability reporting
+- **[Support Guide](https://github.com/rayners/fvtt-journeys-and-jamborees/blob/main/SUPPORT.md)** - Community channels
+- **[Pull Request Template](https://github.com/rayners/fvtt-journeys-and-jamborees/blob/main/.github/pull_request_template.md)** - PR requirements
+
+### 🔄 Contribution Workflow
+
+1. **Discuss First**: Open an issue for features
+2. **Follow Guidelines**: Use our code style and conventions
+3. **Test Thoroughly**: Unit tests + Quench tests
+4. **Document Changes**: Update relevant docs
 
 ### Development Setup
 
