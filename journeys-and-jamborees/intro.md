@@ -5,14 +5,14 @@ title: Introduction
 
 # Journeys & Jamborees
 
-> ⚠️ **ALPHA SOFTWARE - NOT READY FOR USE** ⚠️
+> ⚠️ **ALPHA SOFTWARE - v0.1.0** ⚠️
 > 
 > This module is in early development and is not ready for production use.
 > Features are incomplete, APIs will change, and bugs are expected.
 > 
 > **Do not use this in your active games yet!**
 
-A comprehensive party management system for Foundry VTT, initially designed for the Dragonbane RPG.
+A comprehensive party management system for Foundry VTT that works with multiple game systems including Dragonbane, D&D 5e, Pathfinder 2e, and more.
 
 ## About
 
@@ -38,27 +38,31 @@ Players can assign their characters to the party, and the system automatically h
 - **Character Management**: Add/remove party members with proper permission handling
 - **Character Status**: Track active, traveling, or staying behind status
 - **Travel Roles**: Assign pathfinder, lookout, and quartermaster roles
-- **Resource Tracking**: Manage shared rations and water
+- **Resource Tracking**: Manage shared rations, water, and gold with automatic consumption
 - **Party Inventory**: Shared inventory separate from character items
-- **Travel Status**: Track if party is traveling, resting, or camping
-- **Basic Localization**: English language support
+- **Multi-System Support**: Works with D&D 5e, Pathfinder 2e, Forbidden Lands, Simple Worldbuilding, and more
+- **Rest Mechanics**: Automatic resource consumption when camping
+- **Food Gathering** (Dragonbane): Hunting, fishing, and foraging with customizable RollTables
+- **Journey Tracking**: Distance-based travel with configurable movement rates
+- **Testing Framework**: Comprehensive test suite with Vitest and Quench integration
+- **Basic Localization**: English language support with framework for translations
 
 ### 🚧 In Development
 
-- Journey tracking and logging
-- Weather and encounter systems
+- Enhanced journey logging with session history
+- Advanced weather and encounter systems
 - Mount management
-- Downtime activities
-- Enhanced HUD integration
 - Multi-language support
+- Additional system integrations
+- Advanced automation features
 
 ### 📋 Planned Features
 
-- System-agnostic support beyond Dragonbane
-- Advanced travel mechanics
 - Campaign journal integration
-- Resource consumption automation
 - Party achievements/milestones
+- Trade route management
+- Expanded downtime activities
+- Vehicle support
 
 ## Why Journeys & Jamborees?
 

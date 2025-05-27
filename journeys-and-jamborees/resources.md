@@ -239,3 +239,116 @@ Planned improvements include:
 - Crafting system ties
 - Survival skill bonuses
 - Environmental effects
+
+## Food Gathering System (Dragonbane)
+
+When playing Dragonbane with the Core Set module, the food gathering system provides automated resource acquisition.
+
+### Gathering Methods
+
+Characters can gather food through three methods:
+
+#### 🏹 Hunting
+- **Skill**: Configurable (default: Hunting & Fishing)
+- **Requirements**: Ranged weapon (range ≥10) or traps
+- **Results**: Various animals providing 1d3 to 3d6 rations
+- **Risk**: Some animals are dangerous if hunt fails
+
+#### 🎣 Fishing  
+- **Skill**: Configurable (default: Hunting & Fishing)
+- **Requirements**: Fishing rod or net
+- **Results**: 1d8 rations with rod, 1d10 with net
+- **Best Use**: Near water sources
+
+#### 🌿 Foraging
+- **Skill**: Configurable (default: BUSHCRAFT)
+- **Difficulty**: Varies by season (summer easiest, winter hardest)
+- **Results**: 1d4 to 1d8 rations depending on success
+- **Special**: May find poisonous plants on failure
+
+### Using the System
+
+1. **Assign Activities**: Set character downtime to hunting/fishing/foraging
+2. **Make Camp**: Food gathering happens automatically
+3. **Check Results**: See chat messages for outcomes
+4. **Update Resources**: Successful gathering adds to party rations
+
+### Customizing Food Tables
+
+The module uses RollTables for flexible results:
+
+#### Creating Custom Tables
+
+1. **Name Your Table**:
+   - Hunting: Include "hunting" in the name
+   - Foraging: Include "foraging" in the name
+   - Example: "Arctic Hunting Table"
+
+2. **Add Table Entries**:
+   ```
+   | Roll | Result | Flags |
+   |------|--------|-------|
+   | 1-2 | Arctic Hare | 1d3 rations, weapon/trap |
+   | 3-4 | Seal | 1d6 rations, weapon only |
+   | 5-6 | Polar Bear | 3d6 rations, dangerous |
+   ```
+
+3. **Configure Flags** (in table result settings):
+   ```json
+   {
+     "journeys-and-jamborees": {
+       "rations": "1d6",
+       "requiresWeapon": true,
+       "canUseTrap": false,
+       "dangerous": true
+     }
+   }
+   ```
+
+#### Flag Reference
+
+| Flag | Type | Description |
+|------|------|-------------|
+| `rations` | string/number | Amount of food (e.g., "2d6" or 5) |
+| `requiresWeapon` | boolean | Needs ranged weapon |
+| `canUseTrap` | boolean | Can use traps |
+| `dangerous` | boolean | Dangerous if failed |
+| `special` | string | Special effects for foraging |
+
+### Environmental Tables
+
+Create region-specific tables for immersion:
+
+#### Desert Hunting
+- Lizard (1 ration, trap only)
+- Desert Hare (1d2 rations)
+- Antelope (1d6 rations, weapon only)
+- Giant Scorpion (2d4 rations, dangerous)
+
+#### Arctic Foraging  
+- Lichen (1 ration)
+- Arctic Berries (1d3 rations)
+- Pine Bark (1d2 rations)
+- Nothing Edible (0 rations)
+
+#### Swamp Fishing
+- Mudfish (1d4 rations)
+- Swamp Eel (1d6 rations)
+- Giant Catfish (2d6 rations)
+- Poisonous Fish (0 rations, special: poison)
+
+### Best Practices
+
+1. **Balance Risk/Reward**: Include both good and poor results
+2. **Consider Equipment**: Make some prey weapon-only
+3. **Add Variety**: Mix common and rare results
+4. **Season Appropriately**: Winter tables should be harsher
+5. **Test Tables**: Roll manually to check balance
+
+### Integration Tips
+
+- Link gathering success to weather conditions
+- Create quest hooks from rare hunting results  
+- Use dangerous animals as combat encounters
+- Trade exotic meats at settlements
+- Track special ingredients for crafting

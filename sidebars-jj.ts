@@ -28,6 +28,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Configuration',
+      items: [
+        'system-configuration',
+        'simple-worldbuilding-guide',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Development',
       items: [
         'contributing',

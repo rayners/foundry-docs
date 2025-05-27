@@ -7,8 +7,8 @@ title: Travel System
 
 Manage your party's journeys across the world with J&J's travel mechanics.
 
-:::warning Alpha Feature
-Journey tracking features are partially implemented. Some buttons exist but have limited functionality.
+:::info System Support
+Travel mechanics adapt to your game system with appropriate movement rates, skills, and dice formulas.
 :::
 
 ## Travel Status
@@ -42,15 +42,18 @@ Track your party's progress across the world:
 
 ### Movement Calculation
 
-Movement rates depend on your game system and party composition:
+Movement rates are configured per game system:
 
-#### Dragonbane Movement
-- **On Foot**: 15 km per day
-- **Mounted**: 30 km per day
-- **Mixed Party**: Uses the slower rate
+| System | On Foot | Mounted | Units |
+|--------|---------|---------|-------|
+| **Dragonbane** | 15 | 30 | km/day |
+| **D&D 5e** | 24 | 30 | miles/day |
+| **Pathfinder 2e** | 24 | 32 | miles/day |
+| **Forbidden Lands** | 10 | 20 | km/day |
+| **Simple Worldbuilding** | 1 | 2 | units/day |
 
-:::tip
-The GM can adjust base movement in the Settings tab to match campaign needs.
+:::tip Customization
+GMs can adjust movement rates in Module Settings to match campaign needs.
 :::
 
 ## Travel Actions
@@ -59,37 +62,33 @@ The Travel tab provides several action buttons for journey management:
 
 ### Available Actions
 
-| Action | Purpose | Current Status |
-|--------|---------|----------------|
-| **Find Path** | Roll pathfinding checks | 🚧 Limited functionality |
-| **Random Encounter** | Generate encounters | 🚧 Limited functionality |
-| **Roll Weather** | Determine weather conditions | 🚧 Limited functionality |
-| **Make Camp** | Set up camp for rest | 🚧 Limited functionality |
-
-:::note Future Development
-These features will be fully implemented in upcoming releases. Currently, they serve as reminders for GM actions.
-:::
+| Action | Purpose | How It Works |
+|--------|---------|---------------|
+| **Find Path** | Roll pathfinding checks | Uses assigned pathfinder's skill |
+| **Random Encounter** | Generate encounters | Rolls system-specific dice formula |
+| **Roll Weather** | Determine weather conditions | System-dependent weather generation |
+| **Make Camp** | Set up camp for rest | Triggers overnight resource consumption |
 
 ## Travel Roles in Action
 
 Travel roles (assigned in the Members tab) come into play during journeys:
 
 ### Pathfinder
-- **Skill**: Bushcraft
+- **Skill**: Varies by system (Survival, BUSHCRAFT, etc.)
 - **Responsibilities**:
   - Finding the best route
   - Avoiding natural hazards
   - Reducing travel time
 
 ### Lookout
-- **Skill**: Awareness
+- **Skill**: Varies by system (Perception, AWARENESS, etc.)
 - **Responsibilities**:
   - Spotting danger early
   - Finding points of interest
   - Night watch duties
 
 ### Quartermaster
-- **Skill**: Bartering
+- **Skill**: Varies by system (Persuasion, BARTER, etc.)
 - **Responsibilities**:
   - Managing supplies efficiently
   - Finding resources along the way
@@ -103,7 +102,15 @@ Default consumption rates (configurable in Settings):
 - **Rations**: 1 per character per day
 - **Water**: 1 per character per day
 
-:::important
+### Automatic Consumption
+
+When making camp or resting overnight:
+1. Resources are automatically consumed (if enabled)
+2. Consumption based on active/traveling members only
+3. Visual feedback shows resources deducted
+4. Warnings appear for insufficient supplies
+
+:::important Status Matters
 Only characters with "Active" or "Traveling" status consume resources. Those "Staying Behind" don't eat from party supplies.
 :::
 
@@ -153,6 +160,35 @@ The party sheet provides visual warnings:
 - Record distance traveled
 - Update party journal
 - Plan next session's route
+
+## Food Gathering (Dragonbane)
+
+When playing Dragonbane with the Core Set module, characters can gather food during travel:
+
+### Downtime Activities
+
+Characters with "Traveling" status can perform:
+- **Hunting**: Track and kill animals for meat
+- **Fishing**: Catch fish with rod or net
+- **Foraging**: Find edible plants and fungi
+
+### How It Works
+
+1. Assign downtime activities in the Members tab
+2. Characters automatically attempt gathering when making camp
+3. Success depends on skills and equipment:
+   - Hunting requires ranged weapons or traps
+   - Fishing needs rod or net
+   - Foraging difficulty varies by season
+
+### Customizing Food Tables
+
+The module uses RollTables for results, allowing full customization:
+1. Create tables named "J&J Hunting Table" or "J&J Foraging Table"
+2. Add appropriate creatures/plants for your setting
+3. Set flags for special properties (rations, danger, etc.)
+
+See the [Resources Guide](resources) for detailed food gathering information.
 
 ## Future Features
 
