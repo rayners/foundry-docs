@@ -52,6 +52,16 @@ const config: Config = {
         editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'realms',
+        path: 'realms-and-reaches',
+        routeBasePath: 'realms-and-reaches',
+        sidebarPath: './sidebars-realms.ts',
+        editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
+      },
+    ],
   ],
 
   presets: [
@@ -92,6 +102,13 @@ const config: Config = {
           docsPluginId: 'argon',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'realmsSidebar',
+          position: 'left',
+          label: 'Realms & Reaches',
+          docsPluginId: 'realms',
+        },
+        {
           href: 'https://github.com/rayners',
           label: 'GitHub',
           position: 'right',
@@ -111,6 +128,10 @@ const config: Config = {
             {
               label: 'ARGON Dragonbane',
               to: '/argon-dragonbane/intro',
+            },
+            {
+              label: 'Realms & Reaches',
+              to: '/realms-and-reaches/intro',
             },
           ],
         },
