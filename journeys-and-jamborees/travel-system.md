@@ -11,6 +11,43 @@ Manage your party's journeys across the world with J&J's travel mechanics.
 Travel mechanics adapt to your game system with appropriate movement rates, skills, and dice formulas.
 :::
 
+## Scene Controls *(GM Only)*
+
+J&J adds intelligent travel controls to scenes based on their configuration:
+
+### Auto-Detection
+
+The module automatically detects the appropriate travel scale for each scene:
+
+- **Realm Travel** (hex grids, km/miles/leagues): For overland travel and wilderness exploration
+- **Region Travel** (square grids, ft/meters/yards): For tactical movement and local exploration
+
+### Configuring Scene Travel
+
+1. **Right-click a scene** and select **Configure**
+2. **Enable travel controls** checkbox
+3. **Choose travel scale**:
+   - **Auto-detect** *(default)*: Uses grid type and distance units
+   - **Realm**: Force realm-scale travel controls
+   - **Region**: Force region-scale travel controls  
+   - **None**: Disable travel controls entirely
+
+:::tip Auto-Detection Logic
+- **Grid Type Priority**: Hex grids → Realm, Square grids → Region
+- **Distance Units Fallback**: km/miles → Realm, ft/meters → Region
+- **Manual Override**: Always respected when set
+:::
+
+### Using Scene Controls
+
+When enabled, travel controls appear in the scene toolbar:
+
+- **Realm scenes**: Provide realm selection and creation tools
+- **Region scenes**: Provide region selection and creation tools
+- **Controls visibility**: Only visible to GMs when travel is enabled
+
+This system allows GMs to seamlessly switch between different scales of travel without manual configuration in most cases.
+
 ## Travel Status
 
 Set your party's current activity to reflect what they're doing:
