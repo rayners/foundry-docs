@@ -51,7 +51,7 @@ Add a character to the party.
 **Parameters:**
 - `characterId` (string): The ID of the character actor to add
 
-**Returns:** Promise<Actor>
+**Returns:** `Promise<Actor>`
 
 **Example:**
 ```javascript
@@ -65,7 +65,7 @@ Remove a character from the party.
 **Parameters:**
 - `characterId` (string): The ID of the character to remove
 
-**Returns:** Promise<Actor>
+**Returns:** `Promise<Actor>`
 
 #### `partyActor.setCharacterStatus(characterId, status, downtimeActivity?)`
 Update a character's status within the party.
@@ -75,7 +75,7 @@ Update a character's status within the party.
 - `status` (string): One of "active", "traveling", or "stayingBehind"
 - `downtimeActivity` (string, optional): Activity if traveling
 
-**Returns:** Promise<Actor>
+**Returns:** `Promise<Actor>`
 
 #### `partyActor.assignTravelRole(role, characterId)`
 Assign a character to a travel role.
@@ -84,7 +84,7 @@ Assign a character to a travel role.
 - `role` (string): One of "pathfinder", "lookout", or "quartermaster"
 - `characterId` (string): The character to assign
 
-**Returns:** Promise<Actor>
+**Returns:** `Promise<Actor>`
 
 #### `partyActor.removeTravelRole(role)`
 Remove a character from a travel role.
@@ -92,12 +92,12 @@ Remove a character from a travel role.
 **Parameters:**
 - `role` (string): The role to clear
 
-**Returns:** Promise<Actor>
+**Returns:** `Promise<Actor>`
 
 #### `partyActor.consumeResources()`
 Consume daily rations and water based on party size and settings.
 
-**Returns:** Promise<Object> - Object with consumed amounts
+**Returns:** `Promise<Object>` - Object with consumed amounts
 
 **Example:**
 ```javascript
@@ -108,12 +108,12 @@ const consumed = await partyActor.consumeResources();
 #### `partyActor.rollPathfinding()`
 Roll a pathfinding check using the assigned pathfinder's skill.
 
-**Returns:** Promise<Roll|null>
+**Returns:** `Promise<Roll|null>`
 
 #### `partyActor.rollRandomEncounter()`
 Roll for a random encounter based on system settings.
 
-**Returns:** Promise<Roll>
+**Returns:** `Promise<Roll>`
 
 #### `partyActor.addOwnCharacters(userId)`
 Add all characters owned by a specific user.
@@ -121,12 +121,12 @@ Add all characters owned by a specific user.
 **Parameters:**
 - `userId` (string): The user ID
 
-**Returns:** Promise<Array<string>> - Added character IDs
+**Returns:** `Promise<Array<string>>` - Added character IDs
 
 #### `partyActor.resetPartyData()`
 Clear all party data (characters, resources, roles).
 
-**Returns:** Promise<Actor>
+**Returns:** `Promise<Actor>`
 
 ## Food Gathering API (Dragonbane Only)
 
@@ -144,7 +144,7 @@ Perform a hunting check.
 **Parameters:**
 - `actor` (Actor): The character performing the hunt
 
-**Returns:** Promise<Object>
+**Returns:** `Promise<Object>`
 ```javascript
 {
   success: true,
@@ -162,7 +162,7 @@ Perform a fishing check.
 - `hasRod` (boolean): Whether they have a fishing rod
 - `hasNet` (boolean): Whether they have a fishing net
 
-**Returns:** Promise<Object>
+**Returns:** `Promise<Object>`
 
 #### `foodGathering.forage(actor, season)`
 Perform a foraging check.
@@ -171,7 +171,7 @@ Perform a foraging check.
 - `actor` (Actor): The character foraging
 - `season` (string): Current season ("spring", "summer", "autumn", "winter")
 
-**Returns:** Promise<Object>
+**Returns:** `Promise<Object>`
 
 ## Dragonbane Roll API
 
@@ -194,7 +194,7 @@ Roll a skill check for a Dragonbane character.
   - `push` (boolean): Whether this is a pushed roll
   - `skipDialog` (boolean): Skip the roll dialog
 
-**Returns:** Promise<Roll>
+**Returns:** `Promise<Roll>`
 
 **Example:**
 ```javascript
