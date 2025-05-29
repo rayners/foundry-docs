@@ -10,12 +10,11 @@ Learn about Foundry VTT compatibility, system requirements, and browser support 
 ## Foundry VTT Compatibility
 
 ### Supported Versions
-- **Foundry VTT v11+**: Full compatibility
-- **Foundry VTT v12**: Full compatibility and recommended
+- **Foundry VTT v13+**: Full compatibility and required
 - **Future versions**: Will be supported as they release
 
 ### Minimum Version
-- **v11.315** or later required
+- **v13.315** or later required
 - Earlier versions are not supported
 
 ## System Compatibility
@@ -192,7 +191,7 @@ Include this information when reporting compatibility issues:
 ## Future Compatibility
 
 ### Planned Support
-- **Foundry VTT v13+** - Will be supported on release
+- **Foundry VTT v13+** - Fully supported and required
 - **Mobile optimization** - Planned for future versions
 - **Additional integrations** - More module partnerships
 

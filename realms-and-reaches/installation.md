@@ -9,7 +9,7 @@ Learn how to install and set up Realms & Reaches in your Foundry VTT world.
 
 ## Prerequisites
 
-- **Foundry VTT v11 or later**
+- **Foundry VTT v13 or later**
 - **GM permissions** in your world
 - **A scene to work with** (any size)
 
@@ -42,7 +42,7 @@ If you don't see it:
 1. **Check module is enabled** in world settings
 2. **Refresh your browser** after enabling
 3. **Check console for errors** (F12 → Console tab)
-4. **Verify Foundry VTT version** (v11+ required)
+4. **Verify Foundry VTT version** (v13+ required)
 
 ## Browser Compatibility
 
@@ -61,12 +61,12 @@ If you don't see it:
 ## System Requirements
 
 ### Minimum
-- **Foundry VTT v11+**
+- **Foundry VTT v13+**
 - **2GB RAM**
 - **Modern browser with WebGL**
 
 ### Recommended
-- **Foundry VTT v12+**
+- **Foundry VTT v13+**
 - **4GB RAM**
 - **Hardware-accelerated graphics**
 - **High-resolution display**
@@ -98,7 +98,7 @@ Congratulations! You're ready to start creating realms.
 1. **Check module is enabled** in world settings
 2. **Refresh your browser** after enabling
 3. **Check console for errors** (F12 → Console tab)
-4. **Verify Foundry VTT version** (v11+ required)
+4. **Verify Foundry VTT version** (v13+ required)
 5. **Try disabling other modules** to check for conflicts
 
 ### Performance Issues
