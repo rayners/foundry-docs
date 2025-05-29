@@ -69,6 +69,8 @@ This system allows GMs to work with travel data at the appropriate scale without
 
 The Realms & Reaches controls appear in the left sidebar when the module is active:
 
+![Layer Controls](images/layer-controls.png)
+
 | Tool | Icon | Purpose | Shortcut |
 |------|------|---------|----------|
 | Select | ↖️ | Select and manipulate existing realms | S |
@@ -183,6 +185,8 @@ Best for point-based features, magical effects, or resource deposits.
 ### Tag Editor Interface
 
 The Properties dialog provides a comprehensive tag editing experience:
+
+![Tag Editor](images/tag-editor.png)
 
 #### Components
 - **Name field**: Descriptive realm name
