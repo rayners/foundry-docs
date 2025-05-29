@@ -71,7 +71,7 @@ To add a new module:
 
 - Use Markdown for all documentation
 - Include frontmatter for sidebar positioning
-- Use relative links between pages
+- Use relative links between pages (within the docs site only)
 - **Images**: Must be in `/static/img/` directory and referenced as `/img/filename.png`
 - Keep a consistent structure across modules
 
@@ -80,6 +80,20 @@ To add a new module:
 - **Wrong**: `![Screenshot](images/screenshot.png)` → module subdirectory (causes build failures)
 - Docusaurus serves static assets from `/static/` at the root URL path
 - Never create `images/` subdirectories within module documentation folders
+
+### Link Handling (CRITICAL)
+- **Internal links**: `[User Guide](user-guide.md)` or `[API](api-reference.md)`
+- **Cross-module links**: `[J&J Guide](/journeys-and-jamborees/intro)` (absolute paths within site)
+- **External links**: `[GitHub](https://github.com/user/repo)` for repository links
+- **NEVER**: `[README](../README.md)` or `[Contributing](../CONTRIBUTING.md)` (causes build failures)
+- **Rule**: Any `../` link pointing outside the docs directory structure will break the build
+
+### Build Failure Prevention Checklist
+- [ ] All images are in `/static/img/` and referenced as `/img/filename.png`
+- [ ] No `../README.md` or `../CONTRIBUTING.md` links exist
+- [ ] No `images/` subdirectories in module folders
+- [ ] All `../` links stay within the docs structure
+- [ ] Local `npm run build` succeeds before committing
 
 ## Architecture Notes
 
@@ -97,9 +111,11 @@ Documentation work is tracked in Linear:
 
 ## Testing and Validation
 
+**ALWAYS run `npm run build` locally before committing to prevent deployment failures!**
+
 Before deploying:
 1. Run `npm run typecheck` to check TypeScript types
-2. Run `npm run build` to ensure no build errors
+2. **MANDATORY**: Run `npm run build` to ensure no build errors
 3. Test with `npm run serve` to verify production build
 4. Check all internal links work correctly
 5. Verify module navigation is functional
@@ -108,6 +124,16 @@ Before deploying:
    - Images must be in `/static/img/` directory (NOT in module subdirectories)
    - Use `![Alt Text](/img/filename.png)` format (absolute path from static)
    - Never reference `images/` subdirectories in module folders
+8. **CRITICAL**: Verify all markdown links are internal to the docs site
+   - Use relative links like `[User Guide](user-guide.md)` within modules
+   - Never link to `../README.md` or `../CONTRIBUTING.md` (causes build failures)
+   - Link to GitHub repository directly: `[GitHub](https://github.com/user/repo)`
+
+### Common Build Failure Causes
+1. **Broken image references**: `![Image](images/file.png)` instead of `![Image](/img/file.png)`
+2. **External README links**: `[Guide](../README.md)` instead of internal links
+3. **Missing image files**: Referenced images that don't exist in `/static/img/`
+4. **Relative parent directory links**: Any `../` links outside the docs structure
 
 ## Current Project Status
 
