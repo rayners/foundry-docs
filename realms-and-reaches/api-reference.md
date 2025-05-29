@@ -737,4 +737,4 @@ for (let i = 0; i < 1000; i++) {
 
 ---
 
-For more examples and advanced usage, see the [User Guide](../README.md) and [Contributing Guidelines](../CONTRIBUTING.md).
+For more examples and advanced usage, see the [User Guide](user-guide.md) and [GitHub Repository](https://github.com/rayners/fvtt-realms-and-reaches).

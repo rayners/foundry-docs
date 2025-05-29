@@ -72,8 +72,14 @@ To add a new module:
 - Use Markdown for all documentation
 - Include frontmatter for sidebar positioning
 - Use relative links between pages
-- Add images to `/static/img/` directory
+- **Images**: Must be in `/static/img/` directory and referenced as `/img/filename.png`
 - Keep a consistent structure across modules
+
+### Image Handling (IMPORTANT)
+- **Correct**: `![Screenshot](/img/module-screenshot.png)` → file at `/static/img/module-screenshot.png`
+- **Wrong**: `![Screenshot](images/screenshot.png)` → module subdirectory (causes build failures)
+- Docusaurus serves static assets from `/static/` at the root URL path
+- Never create `images/` subdirectories within module documentation folders
 
 ## Architecture Notes
 
@@ -98,6 +104,10 @@ Before deploying:
 4. Check all internal links work correctly
 5. Verify module navigation is functional
 6. Ensure all documentation files have proper frontmatter for sidebar positioning
+7. **CRITICAL**: Verify all image references exist before committing
+   - Images must be in `/static/img/` directory (NOT in module subdirectories)
+   - Use `![Alt Text](/img/filename.png)` format (absolute path from static)
+   - Never reference `images/` subdirectories in module folders
 
 ## Current Project Status
 

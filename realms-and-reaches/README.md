@@ -54,7 +54,7 @@ Welcome to the comprehensive documentation for Realms & Reaches! This module pro
 
 #### Beginner (New to the module)
 1. **[Getting Started Guide](getting-started.md)** - Complete walkthrough
-2. **[README Examples](../README.md#user-guide)** - Quick reference
+2. **[User Guide Examples](user-guide.md#best-practices)** - Quick reference
 3. **[User Guide → Interface Overview](user-guide.md#interface-overview)** - UI familiarization
 
 #### Intermediate (Using regularly)
@@ -200,7 +200,7 @@ const encounterTable = `encounters-${biome}`;
 - 📋 Performance optimizations
 - 📋 Additional drawing tools
 
-*See [README → Development Roadmap](../README.md#development-roadmap) for details*
+*See [GitHub Repository](https://github.com/rayners/fvtt-realms-and-reaches) for development roadmap details*
 
 ## 💡 Tips for Success
 
