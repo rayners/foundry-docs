@@ -12,7 +12,7 @@ Travel mechanics adapt to your game system with appropriate movement rates, skil
 :::
 
 :::info Realm Integration
-Scene controls for realm and region management are provided by the **[Realms & Reaches](/realms-and-reaches/)** module. J&J can read realm data to modify travel speeds and encounters when that module is installed.
+Scene controls for realm and region management are provided by the **[Realms & Reaches](/realms-and-reaches/intro)** module. J&J can read realm data to modify travel speeds and encounters when that module is installed.
 :::
 
 ## Travel Status
