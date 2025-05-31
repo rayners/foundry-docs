@@ -1,46 +1,94 @@
+---
+sidebar_position: 4
+---
+
 # User Guide
 
-Learn how to use Seasons & Stars to manage time and calendars in your Foundry VTT games.
+A comprehensive guide to using Seasons & Stars for calendar and time management in Foundry VTT.
 
-## Overview
+## 📚 Table of Contents
 
-Seasons & Stars provides an intuitive calendar and time management system for your games. Whether you're running a fantasy campaign with custom calendars or a modern setting using Earth time, Seasons & Stars adapts to your needs.
+- [Getting Started](#getting-started)
+- [Calendar Views](#calendar-views)
+- [Time Management](#time-management)
+- [Calendar Selection](#calendar-selection)
+- [Settings & Configuration](#settings--configuration)
+- [SmallTime Integration](#smalltime-integration)
+- [Troubleshooting](#troubleshooting)
 
-## The Calendar Widget
+## 🚀 Getting Started
 
-### Basic Display
+### Installation
+1. Open Foundry VTT and navigate to **Add-on Modules**
+2. Search for "Seasons & Stars" in the module browser
+3. Click **Install** and enable the module in your world
+4. Refresh your browser and the calendar will be available
 
-The calendar widget shows:
+### First Launch
+When you first enable Seasons & Stars:
+- The module defaults to the **Gregorian calendar**
+- If starting a new world, it automatically sets to today's real-world date
+- The time widget appears in the UI (can be disabled in settings)
 
-- **Current Date**: Day, month, and year in your selected calendar
-- **Current Time**: Hour and minute (if enabled)
-- **Day Progress**: Visual progress bar showing time of day
-- **Calendar Name**: Which calendar system is active
+### Permissions
+- **Players**: Can view calendar and current date/time
+- **GMs**: Can change dates, advance time, and configure calendars
+- **Assistant GMs**: Same permissions as GMs
 
-### Widget Controls
+## 📅 Calendar Views
 
-**Calendar Title** (Click to change calendar)
-- Opens the calendar selection dialog
-- Browse all available calendars
-- Preview sample dates and calendar structure
+Seasons & Stars provides multiple ways to view and interact with your calendar:
 
-**Date Display** (Click for details)
-- Shows detailed date information
-- Access to extended calendar features
-- View important dates and events
+### 1. Full Calendar Widget
+The main calendar interface with complete controls.
 
-### Time Controls (Game Masters Only)
+**Features:**
+- Current date display with formatted text
+- Quick time advancement buttons (minutes, hours, days, weeks, months)
+- Calendar selection dropdown
+- "Today" button to jump to current date
+- Seasonal and time-of-day indicators
 
-**Quick Advancement**:
-- `+15m` - Advance time by 15 minutes
-- `+1h` - Advance time by 1 hour  
-- `+1d` - Advance time by 1 day
+**How to Access:**
+- Click the **calendar icon** in Scene Controls (left sidebar)
+- Or use the macro: `SeasonsStars.CalendarWidget.show()`
 
-**Set Time**:
-- `Dawn` - Set time to 6:00 AM
-- `Noon` - Set time to 12:00 PM
-- `Dusk` - Set time to 6:00 PM
-- `Night` - Set time to midnight
+### 2. Mini Widget (SmallTime Integration)
+A compact calendar companion that works alongside SmallTime.
+
+**Features:**
+- Displays current date in compact format
+- Click to open full calendar widget
+- Automatically positions relative to SmallTime
+- Minimal screen space usage
+
+**Positioning:**
+- **With SmallTime**: Appears above SmallTime automatically
+- **Without SmallTime**: Positions near player list
+- **Responsive**: Adapts to UI changes and window resizing
+
+### 3. Monthly Grid View
+Traditional calendar grid for date selection and navigation.
+
+**Features:**
+- Full month view with clickable dates
+- Previous/next month navigation
+- **Year input**: Click the year to jump to any year instantly
+- Today indicator with clear "TODAY" label
+- Visual distinction for current, selected, and regular dates
+
+**How to Access:**
+- Click **"Month Grid"** button in the full calendar widget
+- Or use the macro: `SeasonsStars.CalendarGridWidget.show()`
+
+### 4. Calendar Selection Dialog
+Browse and switch between available calendars.
+
+**Features:**
+- Preview sample dates for each calendar
+- Calendar structure information (months, weekdays, leap years)
+- Cultural descriptions and settings information
+- Easy switching between calendar systems
 
 ## Calendar Selection
 

@@ -8,8 +8,17 @@ const sidebarSeasons: SidebarsConfig = {
     'user-guide',
     {
       type: 'category',
+      label: 'Migration & Planning',
+      items: [
+        'migration-guide',
+        'roadmap',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Development',
       items: [
+        'developer-guide',
         'applicationv2-development',
       ],
     },

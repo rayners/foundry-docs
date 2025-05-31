@@ -1,63 +1,105 @@
+---
+sidebar_position: 1
+---
+
 # Seasons & Stars
 
-A modern calendar and timekeeping module for Foundry VTT v13+, designed as a clean alternative to Simple Calendar with better internationalization and native integration.
+A modern calendar and timekeeping module for Foundry VTT v13+, designed as a clean alternative to Simple Calendar with full backward compatibility.
 
-## What is Seasons & Stars?
+## 🌟 Features
 
-Seasons & Stars provides elegant calendar and time management for your Foundry VTT games. Built from the ground up for Foundry v13+, it offers:
+### ✅ **Available Now (Beta)**
+- **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
+- **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
+- **Smart Year Navigation**: Click year to jump instantly instead of clicking arrows repeatedly
+- **Real-World Integration**: Gregorian calendars automatically initialize with current date/time
+- **Simple Calendar Compatibility**: Weather modules and existing integrations work immediately
+- **SmallTime Integration**: Seamless positioning and visual consistency
+- **Multiple Calendar Support**: Switch between Gregorian, Vale Reckoning, and custom calendars
 
-- **Native Integration**: Works directly with Foundry's `game.time.worldTime` system
-- **Self-Contained Calendars**: Calendar definitions include their own translations and cultural context
-- **Modern UI**: Built with ApplicationV2 for better performance and user experience
-- **Simple Calendar Compatibility**: Drop-in replacement with API compatibility layer
-- **Human-Readable Format**: Calendar files are easy to read, edit, and share
+### 🚧 **Coming Soon**
+- **Notes System**: Full calendar event and note management with Journal integration
+- **Weather Module Support**: Complete Simple Calendar notes API for weather details
+- **Advanced Configuration**: In-app calendar editor and migration tools
+- **Extended Integrations**: Enhanced module compatibility and hook system
 
-## Key Features
+## 🚀 Quick Start
 
-### 🗓️ **Flexible Calendar System**
-- Support for multiple calendar systems (Gregorian, fantasy calendars, etc.)
-- Easy calendar switching during gameplay
-- Sample calendars included (Earth calendars, fantasy settings)
+### Installation
+1. Install from Foundry VTT module browser: "Seasons & Stars"
+2. Enable the module in your world
+3. Configure your preferred calendar in module settings
 
-### 🌍 **Internationalization**
-- Calendars contain their own translations
-- No need to pollute main module language files
-- Cultural context and setting information included
+### Basic Usage
+- **Open Calendar**: Click the calendar button in scene controls
+- **Change Date**: GMs can click on calendar dates to set world time
+- **Quick Time Controls**: Use the mini widget for rapid time advancement
+- **Calendar Selection**: Switch between different calendar systems anytime
 
-### ⚡ **Modern Performance**
-- Built with ApplicationV2 for Foundry v13+
-- Partial rendering for smooth updates
-- Efficient event handling with action-based system
+## 🎯 Who Should Use This
 
-### 🔧 **Simple Calendar Compatibility**
-- API compatibility layer for existing modules
-- Easy migration from Simple Calendar
-- Preset conversion tools
+### **Beta Testers**
+- Users seeking a modern alternative to Simple Calendar
+- Module developers wanting to integrate calendar functionality
+- GMs who need reliable timekeeping with clean UI
 
-### 🎮 **Game Master Tools**
-- Quick time advancement controls
-- Set time to common periods (dawn, noon, dusk, midnight)
-- Real-time progress indicators
-- Scene controls integration
+### **Migration Candidates**
+- Simple Calendar users experiencing compatibility issues with Foundry v13+
+- Users wanting better SmallTime integration
+- Communities needing custom calendar support
 
-## Philosophy
+## 🤝 Simple Calendar Compatibility
 
-Seasons & Stars is designed around these core principles:
+Seasons & Stars provides **automatic compatibility** with existing Simple Calendar integrations:
 
-1. **Simplicity**: Calendar management should be intuitive, not complex
-2. **Performance**: Modern Foundry patterns for smooth gameplay
-3. **Flexibility**: Support diverse game settings and cultures
-4. **Compatibility**: Work seamlessly with existing modules and workflows
+```javascript
+// Weather modules work immediately
+const currentDate = SimpleCalendar.api.currentDateTime();
+const display = SimpleCalendar.api.timestampToDate(game.time.worldTime);
+console.log(`Today is ${display.display.monthName} ${display.display.day}${display.display.daySuffix}`);
 
-## Getting Started
+// Hook integration continues working
+Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
+  // Your existing weather/module code works unchanged
+});
+```
 
-Ready to enhance your game's timekeeping? Check out our [installation guide](installation) to get started, or explore the [user guide](user-guide) to learn about all the features.
+**No code changes required** for basic weather module integration.
 
-## Module Ecosystem
+## 📋 Requirements
 
-Seasons & Stars is part of a growing ecosystem of interconnected Foundry modules:
+- **Foundry VTT**: v13 or higher
+- **Compatibility**: All game systems (system-agnostic design)
+- **Permissions**: GM required for time changes
 
-- **[Journeys & Jamborees](../journeys-and-jamborees/intro)**: Party management and travel system
-- **[Realms & Reaches](../realms-and-reaches/intro)**: Biome and terrain mapping system
+## 🗺️ Development Roadmap
 
-These modules work together to create rich, immersive gameplay experiences while maintaining clean, modular design.
+### **Phase 1: Core Foundation** ✅ *Complete*
+- Basic calendar system and UI
+- Simple Calendar compatibility layer
+- Essential user features
+
+### **Phase 2: Notes & Integration** 🚧 *Next (Q1 2025)*
+- Full notes system with Journal integration
+- Complete weather module support
+- Advanced hook system
+
+### **Phase 3: Advanced Features** 📅 *Q2 2025*
+- Calendar editor and creation tools
+- Migration assistant from Simple Calendar
+- Enhanced theming and customization
+
+See the complete [Roadmap](roadmap) for detailed timelines.
+
+## 📄 License
+
+[MIT License](https://github.com/your-username/seasons-and-stars/blob/main/LICENSE) - Free for personal and commercial use.
+
+## 🐛 Support & Feedback
+
+- **GitHub**: [Issues & Discussions](https://github.com/your-username/seasons-and-stars)
+- **Discord**: [Foundry VTT Community](https://discord.gg/foundryvtt) - `#modules` channel
+
+---
+
+**Ready to modernize your calendar system?** Install Seasons & Stars today and experience the difference!
