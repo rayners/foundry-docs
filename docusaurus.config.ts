@@ -62,6 +62,16 @@ const config: Config = {
         editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'seasons',
+        path: 'seasons-and-stars',
+        routeBasePath: 'seasons-and-stars',
+        sidebarPath: './sidebars-seasons.ts',
+        editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
+      },
+    ],
   ],
 
   presets: [
@@ -109,6 +119,13 @@ const config: Config = {
           docsPluginId: 'realms',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'seasonsSidebar',
+          position: 'left',
+          label: 'Seasons & Stars',
+          docsPluginId: 'seasons',
+        },
+        {
           href: 'https://github.com/rayners',
           label: 'GitHub',
           position: 'right',
@@ -132,6 +149,10 @@ const config: Config = {
             {
               label: 'Realms & Reaches',
               to: '/realms-and-reaches/intro',
+            },
+            {
+              label: 'Seasons & Stars',
+              to: '/seasons-and-stars/intro',
             },
           ],
         },

@@ -67,7 +67,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Home"
-      description="Documentation for Foundry VTT modules including Journeys & Jamborees and ARGON Dragonbane">
+      description="Documentation for Foundry VTT modules including Journeys & Jamborees, ARGON Dragonbane, Realms & Reaches, and Seasons & Stars">
       <HomepageHeader />
       <main>
         <section className={styles.features}>
@@ -84,6 +84,20 @@ export default function Home(): ReactNode {
                 description="Enhanced Dragonbane RPG system support with quality-of-life improvements and additional features."
                 link="/argon-dragonbane/intro"
                 status="stable"
+              />
+            </div>
+            <div className="row">
+              <ModuleCard
+                title="Realms & Reaches"
+                description="Biome and terrain mapping system for narrative-driven exploration with tag-based region management."
+                link="/realms-and-reaches/intro"
+                status="development"
+              />
+              <ModuleCard
+                title="Seasons & Stars"
+                description="Modern calendar and timekeeping module built for Foundry v13+ with ApplicationV2 architecture."
+                link="/seasons-and-stars/intro"
+                status="development"
               />
             </div>
           </div>
