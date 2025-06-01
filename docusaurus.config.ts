@@ -72,6 +72,16 @@ const config: Config = {
         editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'compat',
+        path: 'simple-calendar-compat',
+        routeBasePath: 'simple-calendar-compat',
+        sidebarPath: './sidebars-compat.ts',
+        editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
+      },
+    ],
   ],
 
   presets: [
@@ -126,6 +136,13 @@ const config: Config = {
           docsPluginId: 'seasons',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'compatSidebar',
+          position: 'left',
+          label: 'Calendar Compat',
+          docsPluginId: 'compat',
+        },
+        {
           href: 'https://github.com/rayners',
           label: 'GitHub',
           position: 'right',
@@ -153,6 +170,10 @@ const config: Config = {
             {
               label: 'Seasons & Stars',
               to: '/seasons-and-stars/intro',
+            },
+            {
+              label: 'Calendar Compat',
+              to: '/simple-calendar-compat/intro',
             },
           ],
         },
