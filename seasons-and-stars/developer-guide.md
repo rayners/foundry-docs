@@ -93,6 +93,68 @@ await game.seasonsStars.api.advanceMonths(months);
 await game.seasonsStars.api.advanceYears(years);
 ```
 
+### Calendar Metadata
+
+#### `getMonthNames(calendarId?: string)`
+Get array of month names for the active or specified calendar.
+
+```javascript
+// Get month names from active calendar
+const months = game.seasonsStars.api.getMonthNames();
+// Returns: ["January", "February", "March", ...]
+
+// Get month names from specific calendar
+const valeMonths = game.seasonsStars.api.getMonthNames('vale-reckoning');
+```
+
+**Returns:** `string[]`
+
+#### `getWeekdayNames(calendarId?: string)`
+Get array of weekday names for the active or specified calendar.
+
+```javascript
+// Get weekday names from active calendar
+const weekdays = game.seasonsStars.api.getWeekdayNames();
+// Returns: ["Sunday", "Monday", "Tuesday", ...]
+
+// Get weekday names from specific calendar
+const valeWeekdays = game.seasonsStars.api.getWeekdayNames('vale-reckoning');
+```
+
+**Returns:** `string[]`
+
+### Enhanced Features
+
+#### `getSunriseSunset(date: CalendarDate, calendarId?: string)`
+Get sunrise and sunset times for a specific date.
+
+```javascript
+const currentDate = game.seasonsStars.api.getCurrentDate();
+const sunTimes = game.seasonsStars.api.getSunriseSunset(currentDate);
+// Returns: { sunrise: 6, sunset: 18 }
+```
+
+**Returns:** `{ sunrise: number; sunset: number }`
+
+:::note Basic Implementation
+Currently returns default values (6 AM sunrise, 6 PM sunset). This can be enhanced in future versions with calendar-specific astronomical calculations.
+:::
+
+#### `getSeasonInfo(date: CalendarDate, calendarId?: string)`
+Get season information for a specific date.
+
+```javascript
+const currentDate = game.seasonsStars.api.getCurrentDate();
+const season = game.seasonsStars.api.getSeasonInfo(currentDate);
+// Returns: { name: "Winter", icon: "winter" }
+```
+
+**Returns:** `{ name: string; icon: string }`
+
+:::note Basic Implementation
+Currently uses simple month-range matching to determine seasons. Future versions may include more sophisticated season calculation based on calendar-specific rules.
+:::
+
 ### Date Conversion
 
 #### `dateToWorldTime(date: CalendarDate)`
@@ -184,88 +246,72 @@ console.log('Available calendars:', calendars);
 
 ## 🔄 Simple Calendar Compatibility
 
-Seasons & Stars provides automatic compatibility with Simple Calendar API for seamless module migration.
+Seasons & Stars provides a **clean integration interface** that enables compatibility with Simple Calendar-dependent modules through the **[Simple Calendar Compatibility Bridge](/simple-calendar-compat/intro)**.
 
-### Compatibility Detection
+:::important Architecture Change
+As of v2.0+, Seasons & Stars **no longer includes Simple Calendar compatibility code**. Instead, it provides a clean integration interface that the separate **Simple Calendar Compatibility Bridge** module uses to provide 100% Simple Calendar API compatibility.
+:::
+
+### Integration Interface
+
+Seasons & Stars exposes a standardized integration interface that compatibility bridges can use:
+
 ```javascript
-// Check if compatibility layer is active
-const isCompatLayer = window.SimpleCalendar?._isSeasonsStarsCompatibility;
+// Check if S&S integration interface is available
+const integration = game.seasonsStars?.integration;
 
-if (window.SimpleCalendar && !isCompatLayer) {
-  // Real Simple Calendar is present
-  console.log('Using Simple Calendar');
-} else if (window.SimpleCalendar && isCompatLayer) {
-  // Seasons & Stars compatibility layer
-  console.log('Using Seasons & Stars compatibility');
-} else {
-  // No calendar system
-  console.log('No calendar system available');
+if (integration?.isAvailable) {
+  console.log('S&S Integration Interface available');
+  console.log('API methods:', Object.keys(integration.api));
+  console.log('Widget support:', !!integration.widgets);
+  console.log('Hook support:', !!integration.hooks);
 }
 ```
 
-### Compatible API Functions
+### For Simple Calendar Compatibility
 
-#### `SimpleCalendar.api.currentDateTime()`
-Get current date in Simple Calendar format (0-based months/days).
+To use Simple Calendar-dependent modules with Seasons & Stars:
 
-```javascript
-const current = SimpleCalendar.api.currentDateTime();
-// Returns: { year: 2024, month: 11, day: 24, hour: 14, minute: 30, second: 0, weekday: 3 }
-```
+1. **Install Seasons & Stars** (this module)
+2. **Install [Simple Calendar Compatibility Bridge](/simple-calendar-compat/installation)**
+3. **Install your Simple Calendar-dependent modules** (Simple Weather, SmallTime, etc.)
 
-#### `SimpleCalendar.api.timestampToDate(timestamp)`
-Critical function for weather modules - includes full display formatting.
+The compatibility bridge provides 100% Simple Calendar API compatibility using S&S as the underlying calendar system.
 
-```javascript
-const dateInfo = SimpleCalendar.api.timestampToDate(game.time.worldTime);
+### Integration Interface API
 
-// Access formatted display data
-console.log(`Today is ${dateInfo.display.monthName} ${dateInfo.display.day}${dateInfo.display.daySuffix}`);
-// Output: "Today is December 25th"
-
-// Full display object includes:
-// - monthName: "December"
-// - day: "25", daySuffix: "th"
-// - year: "2024", yearPrefix: "", yearPostfix: " CE"
-// - date: "2024-12-25", time: "14:30:00"
-// - weekday: "Wednesday"
-```
-
-#### `SimpleCalendar.api.changeDate(date)`
-Change the current date using Simple Calendar format.
+The integration interface provides these methods for compatibility bridges:
 
 ```javascript
-const newDate = {
-  year: 2024,
-  month: 11,  // 0-based (December)
-  day: 30,    // 0-based (31st)
-  hour: 9,
-  minute: 0
-};
+const integration = game.seasonsStars.integration;
 
-const success = await SimpleCalendar.api.changeDate(newDate);
-if (success) {
-  console.log('Date changed successfully');
+// Core date operations
+const currentDate = integration.api.getCurrentDate();
+const convertedDate = integration.api.worldTimeToDate(timestamp);
+const timestamp = integration.api.dateToWorldTime(date);
+
+// Calendar metadata (newly implemented)
+const months = integration.api.getMonthNames();
+const weekdays = integration.api.getWeekdayNames();
+
+// Enhanced features (basic implementations)
+const sunTimes = integration.api.getSunriseSunset(date);
+const season = integration.api.getSeasonInfo(date);
+
+// Widget integration
+if (integration.widgets.mini) {
+  integration.widgets.mini.addSidebarButton('myButton', 'fas fa-star', 'My Button', callback);
 }
+
+// Hook integration
+integration.hooks.onDateChanged((event) => {
+  console.log('Date changed:', event.newDate);
+});
 ```
 
-### Calendar Data Access
-```javascript
-// Get calendar structure
-const months = SimpleCalendar.api.getAllMonths();
-const weekdays = SimpleCalendar.api.getAllWeekdays();
-const currentCalendar = SimpleCalendar.api.getCurrentCalendar();
-
-console.log('Month names:', months.map(m => m.name));
-console.log('Weekday names:', weekdays.map(w => w.name));
-```
-
-### Notes System Compatibility
-```javascript
-// Placeholder functions (Phase 2 implementation)
-const notes = SimpleCalendar.api.getNotes(); // Returns []
-const success = await SimpleCalendar.api.addNote(noteData); // Returns false + warning
-```
+:::tip Developer Tip
+Use the integration interface rather than the direct S&S API when building compatibility modules. This ensures your module works consistently across different S&S versions.
+:::
 
 ## 🪝 Hook System
 

@@ -138,6 +138,31 @@ When "Store weather in Simple Calendar notes" is enabled:
 3. **Calendar Configuration**: Verify seasons are properly configured
 4. **Hemisphere**: Consider manual season override for southern hemisphere
 
+## Known Limitations
+
+### Current Implementation Status
+
+#### ✅ **Fully Implemented**
+- **All Core Simple Weather Features**: Weather generation, persistence, UI integration
+- **Calendar Integration**: Date synchronization, season mapping, sidebar buttons
+- **Note Storage**: Complete weather history storage in calendar notes
+- **Icon Constants**: Full season icon mapping for weather generation
+
+#### ⚠️ **Basic Implementation**
+- **Sunrise/Sunset Times**: Currently returns default 6 AM/6 PM values
+  - Future enhancement: Calendar-specific astronomical calculations
+- **Season Detection**: Uses simple month-range matching
+  - Future enhancement: More sophisticated season calculation based on calendar rules
+
+#### 📋 **Future Enhancements**
+- **Advanced Astronomical Data**: Proper sunrise/sunset calculation based on calendar date and location
+- **Sophisticated Season Logic**: Enhanced season detection with calendar-specific transition rules
+- **Weather Pattern Integration**: Calendar-aware weather patterns based on seasonal data
+
+:::note Implementation Notes
+The basic implementations are sufficient for Simple Weather's current functionality. All core features work correctly, with default values providing reasonable fallbacks where enhanced calculations aren't yet available.
+:::
+
 ## Advanced Usage
 
 ### Custom Weather Events

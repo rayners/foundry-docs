@@ -32,11 +32,13 @@ This bridge enables the following modules to work with modern calendar systems:
 
 ### ✅ **Fully Tested & Supported**
 - **SmallTime** - Time display widget with complete integration
-- **Simple Weather** - Complete weather system with all features:
-  - Sidebar button integration on calendar widgets
-  - Weather data storage in calendar notes (when "Store weather in Simple Calendar notes" is enabled)
-  - Season-based weather using calendar season information
-  - All attachment modes (attached/detached to calendar)
+- **Simple Weather** - Weather system with core features fully working:
+  - ✅ Sidebar button integration on calendar widgets
+  - ✅ Weather data storage in calendar notes (when "Store weather in Simple Calendar notes" is enabled)
+  - ✅ Season-based weather using calendar season information
+  - ✅ All attachment modes (attached/detached to calendar)
+  - ⚠️ Basic sunrise/sunset times (6 AM/6 PM defaults)
+  - ⚠️ Simple season detection (month-range based)
 
 ### 🔄 **Expected to Work**
 - **Calendar/Weather** - Advanced weather systems
