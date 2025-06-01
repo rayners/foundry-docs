@@ -67,7 +67,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Home"
-      description="Documentation for Foundry VTT modules including Journeys & Jamborees, ARGON Dragonbane, Realms & Reaches, and Seasons & Stars">
+      description="Documentation for Foundry VTT modules including Journeys & Jamborees, ARGON Dragonbane, Realms & Reaches, Seasons & Stars, and Simple Calendar Compatibility Bridge">
       <HomepageHeader />
       <main>
         <section className={styles.features}>
@@ -98,6 +98,14 @@ export default function Home(): ReactNode {
                 description="Modern calendar and timekeeping module built for Foundry v13+ with ApplicationV2 architecture."
                 link="/seasons-and-stars/intro"
                 status="development"
+              />
+            </div>
+            <div className="row">
+              <ModuleCard
+                title="Simple Calendar Compatibility Bridge"
+                description="Provides 100% Simple Calendar API compatibility for modern calendar modules. Enables Simple Weather, SmallTime, and other modules to work with Seasons & Stars."
+                link="/simple-calendar-compat/intro"
+                status="stable"
               />
             </div>
           </div>
