@@ -4,12 +4,12 @@ sidebar_position: 1
 
 # Seasons & Stars
 
-A modern calendar and timekeeping module for Foundry VTT v13+, designed as a clean alternative to Simple Calendar with full backward compatibility.
+A calendar and timekeeping module for Foundry VTT v13+, designed as an alternative to Simple Calendar with backward compatibility.
 
 ## 🌟 Features
 
 ### ✅ **Available Now (Beta)**
-- **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
+- **Clean UI**: Responsive calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
 - **Smart Year Navigation**: Click year to jump instantly instead of clicking arrows repeatedly
 - **Real-World Integration**: Gregorian calendars automatically initialize with current date/time
@@ -39,7 +39,7 @@ A modern calendar and timekeeping module for Foundry VTT v13+, designed as a cle
 ## 🎯 Who Should Use This
 
 ### **Beta Testers**
-- Users seeking a modern alternative to Simple Calendar
+- Users seeking a Foundry v13+ compatible alternative to Simple Calendar
 - Module developers wanting to integrate calendar functionality
 - GMs who need reliable timekeeping with clean UI
 
@@ -102,4 +102,4 @@ See the complete [Roadmap](roadmap) for detailed timelines.
 
 ---
 
-**Ready to modernize your calendar system?** Install Seasons & Stars today and experience the difference!
+**Ready to try a Foundry v13+ calendar solution?** Install Seasons & Stars today and experience the difference!

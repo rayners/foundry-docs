@@ -5,11 +5,11 @@ title: Introduction
 
 # Simple Calendar Compatibility Bridge
 
-A Foundry VTT module that provides **100% Simple Calendar API compatibility** for modern calendar modules like **Seasons & Stars**.
+A Foundry VTT module that provides **Simple Calendar API compatibility** for Foundry v13+ calendar modules like **Seasons & Stars**.
 
 ## Overview
 
-The Simple Calendar Compatibility Bridge acts as a translation layer between modules that expect the Simple Calendar API and modern calendar implementations. This allows you to use modern calendar modules while maintaining compatibility with existing modules that depend on Simple Calendar.
+The Simple Calendar Compatibility Bridge acts as a translation layer between modules that expect the Simple Calendar API and Foundry v13+ calendar implementations. This allows you to use v13+ compatible calendar modules while maintaining compatibility with existing modules that depend on Simple Calendar.
 
 ## Key Features
 
@@ -50,9 +50,9 @@ This bridge enables the following modules to work with modern calendar systems:
 
 Simple Calendar doesn't currently support Foundry v13, but many modules still depend on it. This bridge lets you:
 
-- Use modern calendar modules like Seasons & Stars
+- Use Foundry v13+ compatible calendar modules like Seasons & Stars  
 - Keep all your existing calendar-dependent modules working
-- Get the best of both worlds: modern calendar features + existing module compatibility
+- Get the best of both worlds: v13+ calendar features + existing module compatibility
 
 ### For Module Developers
 
