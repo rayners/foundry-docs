@@ -1,0 +1,32 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./build",
+      "numberOfRuns": 3,
+      "url": [
+        "http://localhost/",
+        "http://localhost/seasons-and-stars/",
+        "http://localhost/seasons-and-stars/user-guide",
+        "http://localhost/seasons-and-stars/developer-guide",
+        "http://localhost/journeys-and-jamborees/",
+        "http://localhost/journeys-and-jamborees/quick-start",
+        "http://localhost/realms-and-reaches/",
+        "http://localhost/simple-calendar-compat/"
+      ]
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["warn", {"minScore": 0.8}],
+        "categories:accessibility": ["error", {"minScore": 0.9}],
+        "categories:best-practices": ["warn", {"minScore": 0.85}],
+        "categories:seo": ["warn", {"minScore": 0.8}]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    },
+    "settings": {
+      "chromeFlags": "--no-sandbox --disable-dev-shm-usage"
+    }
+  }
+}

@@ -298,9 +298,11 @@ const weekdays = integration.api.getWeekdayNames();
 const sunTimes = integration.api.getSunriseSunset(date);
 const season = integration.api.getSeasonInfo(date);
 
-// Widget integration
+// Widget integration ✅
 if (integration.widgets.mini) {
   integration.widgets.mini.addSidebarButton('myButton', 'fas fa-star', 'My Button', callback);
+  integration.widgets.mini.removeSidebarButton('myButton');  // ✅ Implemented
+  const hasButton = integration.widgets.mini.hasSidebarButton('myButton');  // ✅ Implemented
 }
 
 // Hook integration
@@ -313,9 +315,51 @@ integration.hooks.onDateChanged((event) => {
 Use the integration interface rather than the direct S&S API when building compatibility modules. This ensures your module works consistently across different S&S versions.
 :::
 
-## 🪝 Hook System
+### Widget Integration API ✅
 
-### Seasons & Stars Hooks
+Seasons & Stars provides a widget system for adding custom buttons and integrations:
+
+```typescript
+interface SeasonsStarsWidgets {
+  addSidebarButton(name: string, icon: string, tooltip: string, callback: Function): void;  // ✅ Implemented
+  removeSidebarButton(name: string): void;  // ✅ Implemented  
+  hasSidebarButton(name: string): boolean;  // ✅ Implemented
+  show(): void;  // ✅ Implemented
+  hide(): void;  // ✅ Implemented
+  toggle(): void;  // ✅ Implemented
+}
+```
+
+**Usage Example:**
+```javascript
+// Add a custom button to calendar widget
+game.seasonsStars.widgets.main.addSidebarButton(
+  'weather',
+  'fas fa-cloud-sun', 
+  'Toggle Weather',
+  () => WeatherApp.toggle()
+);
+
+// Add button to mini widget  
+game.seasonsStars.widgets.mini.addSidebarButton(
+  'notes',
+  'fas fa-sticky-note',
+  'Quick Note',
+  () => createQuickNote()
+);
+
+// Remove button when no longer needed
+game.seasonsStars.widgets.main.removeSidebarButton('weather');
+
+// Check if button exists
+if (game.seasonsStars.widgets.mini.hasSidebarButton('notes')) {
+  console.log('Notes button is active');
+}
+```
+
+## 🪝 Hook System ✅
+
+### Seasons & Stars Hooks ✅
 
 #### `seasons-stars:dateChanged`
 Fired when the world time changes.
@@ -369,6 +413,33 @@ Hooks.on('seasons-stars:ready', (data) => {
 });
 ```
 
+### Debug and Development Hooks ✅
+
+Seasons & Stars provides additional hooks for debugging and development:
+
+#### `seasons-stars:noteCreated` ✅
+Fired when a calendar note is created.
+
+```javascript
+Hooks.on('seasons-stars:noteCreated', (data) => {
+  console.log('Note created:', data.note);
+  console.log('Date:', data.date);
+  console.log('Created by:', data.userId);
+  
+  // Integrate with other modules
+  updateWeatherForNote(data.note, data.date);
+});
+```
+
+**Data Structure:**
+```typescript
+interface NoteCreatedData {
+  note: CalendarNote;
+  date: CalendarDate;
+  userId: string;
+}
+```
+
 ### Simple Calendar Hook Compatibility
 
 #### Mapped Hooks
@@ -381,6 +452,55 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 Hooks.on(SimpleCalendar.Hooks.Ready, (data) => {
   // Equivalent to 'seasons-stars:ready'
 });
+```
+
+### Available Debug APIs ✅
+
+Seasons & Stars exposes several debug and diagnostic APIs:
+
+#### `game.seasonsStars.manager.getDebugInfo()` ✅
+Get comprehensive debug information about the calendar system.
+
+```javascript
+const debugInfo = game.seasonsStars.manager.getDebugInfo();
+console.log('Calendar Engine State:', debugInfo.engine);
+console.log('Current Date:', debugInfo.currentDate);
+console.log('Active Calendar:', debugInfo.activeCalendar);
+console.log('World Time:', debugInfo.worldTime);
+console.log('Conversion Test:', debugInfo.conversionTest);
+```
+
+#### `game.seasonsStars.categories` 🚧
+Access the note categories system (when notes system is enabled).
+
+```javascript
+// Get all available categories
+const categories = game.seasonsStars.categories?.getAll();
+console.log('Available categories:', categories);
+
+// Add custom category
+game.seasonsStars.categories?.addCategory({
+  id: 'custom',
+  name: 'Custom Events',
+  color: '#ff6b6b',
+  icon: 'fas fa-star'
+});
+```
+
+:::warning Implementation Status
+The notes system including categories is fully implemented but may not be exposed in all S&S versions. Check for availability before use.
+:::
+
+#### Calendar Validation APIs ✅
+
+```javascript
+// Validate calendar definition
+const validation = game.seasonsStars.manager.validateAllCalendars();
+console.log('Calendar validation results:', validation);
+
+// Get detailed validation for specific calendar
+const detailedValidation = game.seasonsStars.manager.getActiveEngine().validateWithHelp();
+console.log('Detailed validation:', detailedValidation);
 ```
 
 ## 📊 Calendar Data Structures
@@ -480,7 +600,7 @@ class WeatherManager {
   }
   
   async saveWeatherToNotes(date, weather) {
-    // Phase 1: Use Simple Calendar compatibility
+    // Method 1: Simple Calendar compatibility (via bridge)
     if (this.calendarAPI.addNote) {
       await this.calendarAPI.addNote({
         date: date,
@@ -488,6 +608,32 @@ class WeatherManager {
         content: weather.description,
         category: 'weather'
       });
+    }
+    
+    // Method 2: Direct S&S notes API ✅ (when available)
+    if (game.seasonsStars.notes) {
+      await game.seasonsStars.notes.createNote({
+        title: 'Daily Weather',
+        content: weather.description,
+        startDate: date,
+        category: 'weather',
+        allDay: true,
+        playerVisible: true
+      });
+    }
+    
+    // Method 3: Module flag storage ✅ (always available)
+    if (game.seasonsStars.notes?.setNoteModuleData) {
+      await game.seasonsStars.notes.setNoteModuleData(
+        'weather-data',
+        `weather-${date.year}-${date.month}-${date.day}`,
+        {
+          temperature: weather.temperature,
+          conditions: weather.conditions,
+          windSpeed: weather.windSpeed,
+          timestamp: Date.now()
+        }
+      );
     }
   }
 }
@@ -625,6 +771,46 @@ const notes = SimpleCalendar.api.getNotes(date);
 // New Seasons & Stars notes:
 const notes = game.seasonsStars.api.getNotes(date);
 ```
+
+### Notes System API ✅
+
+If the notes system is available, you can use the comprehensive notes API:
+
+```javascript
+// Check if notes system is available
+if (game.seasonsStars.notes) {
+  // Create a note
+  const note = await game.seasonsStars.notes.createNote({
+    title: 'Important Event',
+    content: 'Something significant happens today.',
+    startDate: game.seasonsStars.api.getCurrentDate(),
+    category: 'event',
+    allDay: true,
+    playerVisible: true
+  });
+  
+  // Find notes for a specific date
+  const currentDate = game.seasonsStars.api.getCurrentDate();
+  const todaysNotes = await game.seasonsStars.notes.findNotesByDate(currentDate);
+  
+  // Store module-specific data
+  await game.seasonsStars.notes.setNoteModuleData(
+    note.id,
+    'my-module',
+    { customData: 'module specific information' }
+  );
+  
+  // Retrieve module data
+  const moduleData = await game.seasonsStars.notes.getNoteModuleData(
+    note.id,
+    'my-module'
+  );
+}
+```
+
+:::info Notes System Status
+The notes system is **fully implemented** in S&S core with complete CRUD operations, categories, search functionality, and module flag support. It provides 100% Simple Calendar notes API compatibility.
+:::
 
 ### From Custom Time Systems
 
