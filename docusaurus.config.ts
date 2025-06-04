@@ -82,6 +82,16 @@ const config: Config = {
         editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'errors',
+        path: 'errors-and-echoes',
+        routeBasePath: 'errors-and-echoes',
+        sidebarPath: './sidebars-errors.ts',
+        editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
+      },
+    ],
   ],
 
   presets: [
@@ -143,6 +153,13 @@ const config: Config = {
           docsPluginId: 'compat',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'errorsSidebar',
+          position: 'left',
+          label: 'Errors & Echoes',
+          docsPluginId: 'errors',
+        },
+        {
           href: 'https://github.com/rayners',
           label: 'GitHub',
           position: 'right',
@@ -174,6 +191,10 @@ const config: Config = {
             {
               label: 'Calendar Compat',
               to: '/simple-calendar-compat/intro',
+            },
+            {
+              label: 'Errors & Echoes',
+              to: '/errors-and-echoes/intro',
             },
           ],
         },
