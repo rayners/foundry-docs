@@ -279,7 +279,7 @@ if (registration?.contextProvider) {
 
 ## Integration Examples
 
-Complete working examples are available in the [Examples Repository](https://github.com/rayners/fvtt-errors-and-echoes/tree/main/examples):
+Integration examples are available in the [Examples Repository](https://github.com/rayners/fvtt-errors-and-echoes/tree/main/examples):
 
 - **[journeys-and-jamborees.js](https://github.com/rayners/fvtt-errors-and-echoes/blob/main/examples/journeys-and-jamborees.js)** - Complex gameplay module
 - **[simple-weather.js](https://github.com/rayners/fvtt-errors-and-echoes/blob/main/examples/simple-weather.js)** - Environmental effects module  

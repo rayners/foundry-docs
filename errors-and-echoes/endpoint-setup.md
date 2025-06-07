@@ -50,7 +50,7 @@ Your endpoint will receive error reports at this URL pattern, where `{author}` i
   "meta": {
     "timestamp": "2025-06-04T00:00:00.000Z",
     "privacyLevel": "minimal|standard|detailed",
-    "reporterVersion": "1.0.0"
+    "reporterVersion": "0.1.2"
   },
   "client": {
     "sessionId": "anonymous-session-id",
@@ -354,7 +354,7 @@ curl -X POST -H "Content-Type: application/json" \
     "error": {"message": "Test error", "type": "Error", "source": "test"},
     "attribution": {"moduleId": "test", "confidence": "high", "method": "manual", "source": "test"},
     "foundry": {"version": "12.331"},
-    "meta": {"timestamp": "2025-06-04T00:00:00.000Z", "privacyLevel": "minimal", "reporterVersion": "1.0.0"}
+    "meta": {"timestamp": "2025-06-04T00:00:00.000Z", "privacyLevel": "minimal", "reporterVersion": "0.1.2"}
   }' \
   https://your-endpoint.com/report/your-name
 ```

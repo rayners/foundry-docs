@@ -260,7 +260,7 @@ async function testErrorReportFormat() {
     meta: {
       timestamp: new Date().toISOString(),
       privacyLevel: 'minimal',
-      reporterVersion: '1.0.0'
+      reporterVersion: '0.1.2'
     },
     client: {
       sessionId: 'test-session-123',
@@ -421,9 +421,9 @@ function testContextProviderPerformance() {
   console.log(`  Average: ${avgTime.toFixed(4)}ms per call`);
   
   if (avgTime > 10) {
-    console.warn('⚠️ Context provider may be too slow (>10ms average)');
+    console.warn('⚠️ Context provider may be slow (>10ms average) - consider optimization');
   } else {
-    console.log('✅ Context provider performance is good');
+    console.log('✅ Context provider performance appears reasonable');
   }
 }
 ```
@@ -465,9 +465,9 @@ function testMemoryUsage() {
     console.log(`  Increase: ${(increase / 1024).toFixed(2)} KB`);
     
     if (increase > 1024 * 1024) { // 1MB
-      console.warn('⚠️ Significant memory increase detected');
+      console.warn('⚠️ Significant memory increase detected - may indicate leaks');
     } else {
-      console.log('✅ Memory usage is reasonable');
+      console.log('✅ Memory usage appears stable');
     }
   }, 2000);
 }

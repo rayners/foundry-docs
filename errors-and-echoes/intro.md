@@ -31,7 +31,7 @@ Errors and Echoes is a privacy-focused error reporting system for Foundry VTT th
 | ⚙️ Settings UI                 | ✅ Complete     | Foundry-native configuration interface with registered modules display          |
 | 📊 Manual Reporting            | ✅ Complete     | Direct error reporting API for modules                                          |
 | 🔗 **Module Registration API** | ✅ **Complete** | **Full registration system with context providers and filters**                 |
-| 🧪 Testing Infrastructure      | ✅ **Complete** | **Comprehensive test suite with 35 passing tests**                              |
+| 🧪 Testing Infrastructure      | ⚠️ **Beta**     | **Test framework established (currently requires setup fixes)**                  |
 
 ## Quick Start
 
@@ -61,6 +61,44 @@ Errors and Echoes provides a complete error reporting ecosystem:
 ## Reference Implementation
 
 A complete reference implementation for error reporting endpoints is available at [sentry-relay](https://github.com/rayners/sentry-relay), demonstrating integration with Sentry for production error monitoring.
+
+## Current Status and Roadmap
+
+### Beta Release Status
+
+Errors & Echoes is currently in **beta** with core functionality working but some areas needing refinement:
+
+**✅ Working Features:**
+- Error capture and attribution system
+- Privacy controls and consent management  
+- Module registration API
+- Settings UI with registered module display
+- Production infrastructure at https://errors.rayners.dev
+
+**⚠️ Known Issues:**
+- Test suite requires setup fixes to run properly
+- Module registration examples need real-world validation
+- Documentation may have gaps compared to implementation
+
+**🔄 Next Priorities:**
+- Fix test infrastructure for reliable quality assurance
+- Validate integration examples with popular modules
+- Improve error attribution accuracy based on real usage
+- Add comprehensive module compatibility testing
+
+### Upcoming Features
+
+**v0.2.0 Planned:**
+- Enhanced error attribution with machine learning patterns
+- Real-time error analytics and pattern detection
+- Additional context providers for common debugging scenarios
+- Improved module compatibility and integration testing
+
+**v0.3.0 Planned:**
+- Advanced filtering capabilities with smart noise reduction
+- Internationalization support for multiple languages
+- Integration with Foundry package browser for seamless setup
+- Performance optimizations based on production usage data
 
 ## Community and Support
 

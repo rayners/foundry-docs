@@ -8,20 +8,21 @@ A calendar and timekeeping module for Foundry VTT v13+, designed as an alternati
 
 ## 🌟 Features
 
-### ✅ **Available Now (Beta)**
+### ✅ **Available Now (Alpha)**
 - **Clean UI**: Responsive calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
 - **Smart Year Navigation**: Click year to jump instantly instead of clicking arrows repeatedly
 - **Real-World Integration**: Gregorian calendars automatically initialize with current date/time
-- **Simple Calendar Compatibility**: Weather modules and existing integrations work immediately
+- **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
 - **SmallTime Integration**: Seamless positioning and visual consistency
 - **Multiple Calendar Support**: Switch between Gregorian, Vale Reckoning, and custom calendars
+- **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
 ### 🚧 **Coming Soon**
-- **Notes System**: Full calendar event and note management with Journal integration
-- **Weather Module Support**: Complete Simple Calendar notes API for weather details
-- **Advanced Configuration**: In-app calendar editor and migration tools
-- **Extended Integrations**: Enhanced module compatibility and hook system
+- **Complete Notes Editing**: Calendar-aware note editing interface for metadata management
+- **Calendar Import/Creation**: In-app calendar editor and Simple Calendar migration tools
+- **Advanced Configuration**: Enhanced calendar customization and validation
+- **Extended Integrations**: Additional module compatibility and hook enhancements
 
 ## 🚀 Quick Start
 
@@ -38,33 +39,36 @@ A calendar and timekeeping module for Foundry VTT v13+, designed as an alternati
 
 ## 🎯 Who Should Use This
 
-### **Beta Testers**
-- Users seeking a Foundry v13+ compatible alternative to Simple Calendar
+### **Alpha Testers**
 - Module developers wanting to integrate calendar functionality
 - GMs who need reliable timekeeping with clean UI
+- Communities wanting to test cutting-edge calendar features
 
 ### **Migration Candidates**
-- Simple Calendar users experiencing compatibility issues with Foundry v13+
+- Users seeking a calendar solution for Foundry v13+
 - Users wanting better SmallTime integration
 - Communities needing custom calendar support
 
+⚠️ **Migration Note**: Simple Calendar users should review current migration limitations including calendar import and note synchronization.
+
 ## 🤝 Simple Calendar Compatibility
 
-Seasons & Stars provides **automatic compatibility** with existing Simple Calendar integrations:
+Seasons & Stars provides **API compatibility** with Simple Calendar integrations via a separate compatibility bridge module:
 
 ```javascript
-// Weather modules work immediately
+// Install Simple Calendar Compatibility Bridge for module integration
+// Weather modules work with bridge installed
 const currentDate = SimpleCalendar.api.currentDateTime();
 const display = SimpleCalendar.api.timestampToDate(game.time.worldTime);
 console.log(`Today is ${display.display.monthName} ${display.display.day}${display.display.daySuffix}`);
 
-// Hook integration continues working
+// Hook integration works through bridge
 Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
-  // Your existing weather/module code works unchanged
+  // Your existing weather/module code works with bridge
 });
 ```
 
-**No code changes required** for basic weather module integration.
+**Bridge module required** for Simple Calendar-dependent module integration.
 
 ## 📋 Requirements
 
@@ -79,12 +83,12 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 - Simple Calendar compatibility layer
 - Essential user features
 
-### **Phase 2: Notes & Integration** 🚧 *Next (Q1 2025)*
-- Full notes system with Journal integration
-- Complete weather module support
-- Advanced hook system
+### **Phase 2: Notes Editing Enhancement** 🚧 *Next (Q3 2025)*
+- Calendar-aware note editing interface
+- Note metadata management
+- Enhanced note browser and filtering
 
-### **Phase 3: Advanced Features** 📅 *Q2 2025*
+### **Phase 3: Calendar Creation & Import** 📅 *Q4 2025*
 - Calendar editor and creation tools
 - Migration assistant from Simple Calendar
 - Enhanced theming and customization
@@ -93,11 +97,11 @@ See the complete [Roadmap](roadmap) for detailed timelines.
 
 ## 📄 License
 
-[MIT License](https://github.com/your-username/seasons-and-stars/blob/main/LICENSE) - Free for personal and commercial use.
+[MIT License](https://github.com/rayners/fvtt-seasons-and-stars/blob/main/LICENSE) - Free for personal and commercial use.
 
 ## 🐛 Support & Feedback
 
-- **GitHub**: [Issues & Discussions](https://github.com/your-username/seasons-and-stars)
+- **GitHub**: [Issues & Discussions](https://github.com/rayners/fvtt-seasons-and-stars)
 - **Discord**: [Foundry VTT Community](https://discord.gg/foundryvtt) - `#modules` channel
 
 ---
