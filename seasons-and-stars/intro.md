@@ -15,7 +15,7 @@ A calendar and timekeeping module for Foundry VTT v13+, designed as an alternati
 - **Real-World Integration**: Gregorian calendars automatically initialize with current date/time
 - **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
 - **SmallTime Integration**: Seamless positioning and visual consistency
-- **Multiple Calendar Support**: Switch between Gregorian, Vale Reckoning, and custom calendars
+- **15 Built-in Calendars**: Gregorian, D&D, Pathfinder, Critical Role, and other popular RPG calendars
 - **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
 ### 🚧 **Coming Soon**
@@ -75,6 +75,26 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 - **Foundry VTT**: v13 or higher
 - **Compatibility**: All game systems (system-agnostic design)
 - **Permissions**: GM required for time changes
+
+## 🎉 Recent Updates
+
+### **Widget Switching & UI Enhancements** (v0.2.4+)
+- ✅ **Keyboard Shortcuts**: Alt+S for default widget, Alt+Shift+S for mini, Alt+Ctrl+S for grid
+- ✅ **Scene Control Integration**: Calendar button in Journal Notes controls for easy access
+- ✅ **Cross-Widget Navigation**: Switch between widget types using header controls
+- ✅ **Enhanced Mini Widget**: Double-click to open larger view, better SmallTime positioning
+
+### **SmallTime Integration Improvements**
+- ✅ **Better Detection**: Improved SmallTime element detection across different setups
+- ✅ **Visual Consistency**: Styling matches SmallTime background for seamless integration
+- ✅ **Smart Positioning**: Positions above SmallTime with player list fallback
+- ✅ **Performance**: Direct instance tracking for faster response times
+
+### **Production Features** (v0.2.0+)
+- ✅ **Error Handling**: Better logging and graceful failure recovery
+- ✅ **Input Validation**: API protection with helpful error messages
+- ✅ **TypeScript Support**: Type definitions for reliable development
+- ✅ **Testing**: 100% test pass rate with widget API coverage
 
 ## 🗺️ Development Roadmap
 

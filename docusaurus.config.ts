@@ -92,6 +92,16 @@ const config: Config = {
         editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'familiar',
+        path: 'familiar',
+        routeBasePath: 'familiar',
+        sidebarPath: './sidebars-familiar.ts',
+        editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
+      },
+    ],
   ],
 
   presets: [
@@ -160,6 +170,13 @@ const config: Config = {
           docsPluginId: 'errors',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'familiarSidebar',
+          position: 'left',
+          label: 'Foundry Familiar',
+          docsPluginId: 'familiar',
+        },
+        {
           href: 'https://github.com/rayners',
           label: 'GitHub',
           position: 'right',
@@ -195,6 +212,10 @@ const config: Config = {
             {
               label: 'Errors & Echoes',
               to: '/errors-and-echoes/intro',
+            },
+            {
+              label: 'Foundry Familiar',
+              to: '/familiar/intro',
             },
           ],
         },

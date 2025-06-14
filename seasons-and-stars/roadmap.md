@@ -67,32 +67,21 @@ Seasons & Stars aims to be the **modern, reliable, and extensible** calendar sol
 
 ---
 
-## ✅ Phase 2: Integration & Notes (Q4 2024 - COMPLETE)
+## ✅ Phase 2: Core Integration (Q4 2024 - COMPLETE)
 *Enhanced Compatibility Release*
 
-### Notes System ✅
-- [x] **Complete Notes Implementation**
-  - [x] Journal entry integration for persistent storage
-  - [x] Note categories with customizable colors (8 default + custom)
-  - [x] Date range support (multi-day events)
-  - [x] Recurring events (daily, weekly, monthly, yearly)
-  - [x] User visibility permissions (GM/player/specific users)
-  - [x] Search functionality with filtering
-  - [x] Performance optimization for large note collections
+### Notes System (Basic) ✅
+- [x] **Basic Notes Implementation**
+  - [x] Note creation interface via calendar grid (GMs only)
+  - [x] Visual indicators showing days with notes
+  - [x] Backend API for CRUD operations
+  - [x] Simple Calendar compatibility via bridge module
   - [x] Module flag support for external data storage
 
-- [x] **Weather Module Support**
-  - [x] Full Simple Calendar notes API compatibility
-  - [x] Weather detail storage and retrieval
-  - [x] Module-specific data persistence (Simple Weather tested)
-  - [x] Integration examples for popular weather modules
-  - [x] 100% compatibility verified with Simple Weather
-
-- [x] **Advanced Event Management**
-  - [x] Note categories and tagging system
-  - [x] Advanced search with multi-criteria filtering
-  - [x] Calendar grid integration with visual indicators
-  - [x] Real-time note creation from calendar interface
+⚠️ **Current Limitations**:
+- Note editing only opens basic Foundry journal interface
+- Calendar-specific metadata cannot be modified after creation
+- No dedicated note management interface
 
 ### Enhanced API ✅
 - [x] **Extended Simple Calendar Compatibility**
@@ -129,10 +118,16 @@ Seasons & Stars aims to be the **modern, reliable, and extensible** calendar sol
 
 ---
 
-## 🚧 Phase 3: Advanced Features (Q1 2025)
-*Full-Featured Release*
+## 🚧 Phase 3: User Features (Q3-Q4 2025)
+*Next Priority Features*
 
-### Calendar Creation & Management 🔮
+### **HIGH PRIORITY: Calendar Import/Creation** 🎯
+- [ ] **Calendar Import/Export**
+  - JSON format standardization
+  - Simple Calendar migration tools
+  - Community calendar sharing
+  - Batch calendar operations
+
 - [ ] **In-App Calendar Editor**
   - Visual calendar designer
   - Month and weekday customization
@@ -140,11 +135,12 @@ Seasons & Stars aims to be the **modern, reliable, and extensible** calendar sol
   - Cultural description editor
   - Real-time preview system
 
-- [ ] **Calendar Import/Export**
-  - JSON format standardization
-  - Simple Calendar migration tools
-  - Community calendar sharing
-  - Batch calendar operations
+### **HIGH PRIORITY: Complete Notes System** 🎯
+- [ ] **Enhanced Notes UI System**
+  - Complete notes editing interface
+  - Calendar-aware note editing for metadata management
+  - Advanced note management and search
+  - Note templates and bulk operations
 
 - [ ] **Advanced Calendar Features**
   - Multiple concurrent calendars

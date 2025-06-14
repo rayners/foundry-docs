@@ -8,14 +8,12 @@ Learn how to integrate your Foundry VTT module with Errors and Echoes for enhanc
 
 ## Quick Start
 
-The simplest integration only requires a few lines of code during your module's initialization:
+The simplest integration uses the hook-based registration system (recommended for v0.2.0+):
 
 ```javascript
-// Register once during module initialization
-Hooks.once('ready', () => {
-  if (!window.ErrorsAndEchoesAPI) return;
-
-  window.ErrorsAndEchoesAPI.register({
+// Hook-based registration (recommended)
+Hooks.on('errorsAndEchoesReady', (api) => {
+  api.register({
     moduleId: 'your-module-id',
     
     // Optional: Provide context for debugging
@@ -42,8 +40,10 @@ Hooks.once('ready', () => {
 At minimum, provide your module ID:
 
 ```javascript
-window.ErrorsAndEchoesAPI.register({
-  moduleId: 'my-awesome-module'
+Hooks.on('errorsAndEchoesReady', (api) => {
+  api.register({
+    moduleId: 'my-awesome-module'
+  });
 });
 ```
 
@@ -215,15 +215,17 @@ Hooks.on('updateActor', (actor, data, options, userId) => {
 Configure a custom error reporting endpoint for your modules:
 
 ```javascript
-window.ErrorsAndEchoesAPI.register({
-  moduleId: 'my-module',
-  endpoint: {
-    name: 'My Module Error Reporting',
-    url: 'https://errors.my-domain.com/report/my-module',
-    author: 'my-username',
-    modules: ['my-module', 'my-other-module'],
-    enabled: true,
-  },
+Hooks.on('errorsAndEchoesReady', (api) => {
+  api.register({
+    moduleId: 'my-module',
+    endpoint: {
+      name: 'My Module Error Reporting',
+      url: 'https://errors.my-domain.com/report/my-module',
+      author: 'my-username',
+      modules: ['my-module', 'my-other-module'],
+      enabled: true,
+    },
+  });
 });
 ```
 
