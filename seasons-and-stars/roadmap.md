@@ -8,9 +8,9 @@ Development timeline and planned features for Seasons & Stars calendar system.
 
 ## 🎯 Vision Statement
 
-Seasons & Stars aims to be the **modern, reliable, and extensible** calendar solution for Foundry VTT, providing:
+Seasons & Stars aims to be a **reliable and extensible** calendar solution for Foundry VTT, providing:
 - **Seamless migration** from Simple Calendar
-- **Enhanced user experience** with modern UI/UX
+- **Enhanced user experience** with native Foundry v13+ UI
 - **Robust developer API** for module integration
 - **Community-driven development** based on real user needs
 
@@ -118,33 +118,63 @@ Seasons & Stars aims to be the **modern, reliable, and extensible** calendar sol
 
 ---
 
-## 🚧 Phase 3: User Features (Q3-Q4 2025)
-*Next Priority Features*
+## 🚧 Next Development Phases
 
-### **HIGH PRIORITY: Calendar Import/Creation** 🎯
-- [ ] **Calendar Import/Export**
-  - JSON format standardization
-  - Simple Calendar migration tools
-  - Community calendar sharing
-  - Batch calendar operations
+### **v0.3.0 - Enhanced Widget Features** (Ready for Release)
 
-- [ ] **In-App Calendar Editor**
-  - Visual calendar designer
-  - Month and weekday customization
-  - Leap year rule configuration
-  - Cultural description editor
-  - Real-time preview system
+**Focus**: Widget customization and interaction improvements
 
-### **HIGH PRIORITY: Complete Notes System** 🎯
-- [ ] **Enhanced Notes UI System**
-  - Complete notes editing interface
-  - Calendar-aware note editing for metadata management
-  - Advanced note management and search
-  - Note templates and bulk operations
+- **Configurable Quick Time Buttons**: Customizable time advancement with user-defined intervals and formatting
+- **Calendar Click Behavior**: Configurable calendar click actions with modifier key support for date setting vs navigation
+- **Enhanced Widget Controls**: Standardized button styling and improved visual consistency
+- **Settings Preview**: Live preview of button configurations in module settings
 
-- [ ] **Advanced Calendar Features**
-  - Multiple concurrent calendars
-  - Calendar conversion tools
+### **v0.4.0 - Performance and Moon Tracking** (Next Release)
+
+**Focus**: Performance optimization and lunar cycle features
+
+- **Lazy Calendar Loading**: Only load required calendars to improve startup performance and reduce errors
+- **Moon Phase Tracking**: Basic lunar cycle tracking for lycantropy, curses, and celestial events
+- **Performance Optimization**: Reduced memory usage and faster module initialization
+- **Calendar System Enhancement**: Better error handling and validation for calendar definitions
+
+### **v0.5.0 - Notes System Enhancement** (Next Priority)
+
+**Focus**: Complete the calendar-aware notes editing system
+
+- **Enable Custom Note Editor**: Activate the existing `NoteEditingDialog` for calendar notes (code exists but disabled)
+- **Note Metadata Management**: Interface for changing categories, tags, and date associations after creation
+- **Enhanced Note Browser**: Dedicated interface for browsing and searching calendar notes with metadata filtering
+- **Advanced Notes Features**: Enhanced search UI, bulk operations, and note templates
+
+### **v0.6.0 - Calendar Creation and Import System** (Future)
+
+**Focus**: Calendar creation and migration tools
+
+- **Calendar Editor**: In-app tool for creating custom calendars
+- **Simple Calendar Import**: Tools for migrating Simple Calendar configurations and data
+- **Calendar Validation**: Built-in validation for custom calendar definitions
+- **Migration Wizard**: Step-by-step guide for Simple Calendar users
+
+### **v0.7.0 - Enhanced Module Integration** (Future)
+
+**Focus**: Deeper integration with the Foundry ecosystem
+
+- **Weather Module Support**: Enhanced integration with weather systems
+- **Advanced Event Management**: Improved recurring events and reminders
+- **API Expansion**: More comprehensive developer APIs
+- **Module Templates**: Examples for module developers
+- **UI/UX Improvements**: Enhanced widget interfaces and user experience refinements
+- **Date Context Menus**: Right-click context menus for calendar dates with additional actions and information
+
+### **v1.0.0 - Stable Release** (Future)
+
+**Focus**: Production stability and feature completeness
+
+- **Feature Parity**: Complete Simple Calendar compatibility
+- **Comprehensive Testing**: Full compatibility validation
+- **Performance Optimization**: Memory and speed improvements
+- **Community Features**: Calendar sharing and collaboration tools
   - Historical date tracking
   - Custom intercalary day support
 
@@ -242,25 +272,26 @@ Seasons & Stars aims to be the **modern, reliable, and extensible** calendar sol
 
 ---
 
-## 📊 Success Metrics
+## 📊 Development Goals
 
-### Phase 1 Targets ✅
-- [x] **Installation Rate**: 500+ installs in first month
-- [x] **Compatibility**: 90%+ existing weather modules work
-- [x] **User Satisfaction**: Positive feedback from beta testers
-- [x] **Performance**: Faster than Simple Calendar in benchmarks
+### Phase 1 Goals ✅
+- [x] **Core Compatibility**: Weather modules work with Simple Calendar bridge
+- [x] **User Feedback**: Positive reception from alpha testers
+- [x] **Performance**: Optimized calendar calculations and UI rendering
+- [x] **Foundation**: Stable API and core functionality
 
-### Phase 2 Targets ✅
-- [x] **Complete Notes System**: Full implementation with 100% Simple Calendar compatibility
+### Phase 2 Goals ⚠️
+- [x] **Basic Notes System**: Note creation with categories and tags (editing limited to basic journal interface)
 - [x] **Weather Module Support**: Verified Simple Weather integration
 - [x] **Enhanced API**: Complete widget and hook systems
+- [ ] **Complete Notes Editing**: Calendar-aware note editing interface for metadata management (disabled pending implementation)
 - [x] **Documentation Quality**: Comprehensive API and developer guides
-- [x] **Performance Optimization**: Sub-100ms performance for 1000+ notes
+- [x] **Performance Optimization**: Efficient handling of large note collections
 
-### Phase 3 Targets 🔮
-- [ ] **Market Position**: Leading calendar solution for Foundry v13+
-- [ ] **Developer Adoption**: 10+ modules with native S&S integration
-- [ ] **Feature Completeness**: 100% Simple Calendar feature parity
+### Phase 3 Goals 🔮
+- [ ] **Feature Leadership**: Advanced calendar features for Foundry v13+
+- [ ] **Developer Ecosystem**: Multiple modules with native S&S integration
+- [ ] **Feature Completeness**: Complete Simple Calendar feature parity
 - [ ] **Community Growth**: Self-sustaining community contributions
 
 ---
@@ -345,14 +376,14 @@ Seasons & Stars aims to be the **modern, reliable, and extensible** calendar sol
 
 ## 📈 Long-term Vision (2025+)
 
-### **The Ultimate Calendar Solution**
-Seasons & Stars aims to become the definitive calendar and timekeeping solution for virtual tabletops, expanding beyond Foundry VTT to:
+### **Advanced Calendar Features**
+Seasons & Stars aims to become the definitive calendar and timekeeping solution for Foundry VTT, focusing on:
 
-#### **Platform Expansion** 🌐
-- **Roll20 Integration**: Bring S&S to other VTT platforms
-- **Standalone Application**: Desktop/mobile apps for campaign planning
-- **Web Integration**: Browser-based calendar tools
-- **API Services**: Cloud-based calendar synchronization
+#### **Enhanced Foundry Integration** 🌐
+- **Deep System Integration**: Native game system calendar features
+- **Advanced Automation**: Smart event scheduling and triggers
+- **Campaign Tools**: Enhanced campaign management integration
+- **Performance Optimization**: Scalable architecture for large campaigns
 
 #### **Feature Expansion** 🚀
 - **Astronomical Calculations**: Real celestial mechanics
