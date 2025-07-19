@@ -4,7 +4,7 @@ This guide will help you install and configure Seasons & Stars for your Foundry 
 
 ## Requirements
 
-- **Foundry VTT**: Version 13.327 or later
+- **Foundry VTT**: Version 13 or later
 - **Browser**: Modern browser with ES2020 support
 - **Permissions**: Ability to install modules (requires Admin or Assistant level)
 
@@ -98,7 +98,7 @@ If you're migrating from Simple Calendar:
 1. **Install Seasons & Stars** alongside Simple Calendar
 2. **Enable compatibility mode** (enabled by default)
 3. **Test your existing modules** to ensure they work
-4. **Import your calendar data** using the conversion tools
+4. **Import your calendar data** using migration tools (when available)
 5. **Disable Simple Calendar** once everything is working
 
 ### Other Modules

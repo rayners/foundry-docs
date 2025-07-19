@@ -210,7 +210,7 @@ If you're migrating from Simple Calendar:
 
 1. **Enable compatibility mode** (on by default)
 2. **Test existing modules** to ensure they work
-3. **Import calendar data** using conversion tools
+3. **Import calendar data** using migration tools (when available)
 4. **Switch gradually** to test functionality
 
 ### Module Ecosystem

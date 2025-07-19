@@ -46,17 +46,18 @@ const version = game.seasonsStars?.VERSION;
 
 ### Date Retrieval
 
-#### `getCurrentDate(calendarId?: string)`
+#### `getCurrentDate()`
 Get the current date from the active calendar.
 
 ```javascript
 // Get current date from active calendar
 const currentDate = game.seasonsStars.api.getCurrentDate();
 // Returns: { year: 2024, month: 12, day: 25, weekday: 3, time: { hour: 14, minute: 30, second: 0 } }
-
-// Get date from specific calendar
-const gregorianDate = game.seasonsStars.api.getCurrentDate('gregorian');
 ```
+
+:::note Calendar-Specific Operations
+The `calendarId` parameter is planned for future implementation but not currently supported. All operations use the currently active calendar.
+:::
 
 **Returns:** `CalendarDate | null`
 
@@ -79,7 +80,12 @@ Advance world time by specified number of hours.
 ```javascript
 // Advance by 8 hours (long rest)
 await game.seasonsStars.api.advanceHours(8);
+```
 
+#### `advanceMinutes(minutes: number)`
+Advance world time by specified number of minutes.
+
+```javascript
 // Advance by 30 minutes
 await game.seasonsStars.api.advanceMinutes(30);
 ```
@@ -95,37 +101,31 @@ await game.seasonsStars.api.advanceYears(years);
 
 ### Calendar Metadata
 
-#### `getMonthNames(calendarId?: string)`
-Get array of month names for the active or specified calendar.
+#### `getMonthNames()`
+Get array of month names for the active calendar.
 
 ```javascript
 // Get month names from active calendar
 const months = game.seasonsStars.api.getMonthNames();
 // Returns: ["January", "February", "March", ...]
-
-// Get month names from specific calendar
-const valeMonths = game.seasonsStars.api.getMonthNames('vale-reckoning');
 ```
 
 **Returns:** `string[]`
 
-#### `getWeekdayNames(calendarId?: string)`
-Get array of weekday names for the active or specified calendar.
+#### `getWeekdayNames()`
+Get array of weekday names for the active calendar.
 
 ```javascript
 // Get weekday names from active calendar
 const weekdays = game.seasonsStars.api.getWeekdayNames();
 // Returns: ["Sunday", "Monday", "Tuesday", ...]
-
-// Get weekday names from specific calendar
-const valeWeekdays = game.seasonsStars.api.getWeekdayNames('vale-reckoning');
 ```
 
 **Returns:** `string[]`
 
 ### Enhanced Features
 
-#### `getSunriseSunset(date: CalendarDate, calendarId?: string)`
+#### `getSunriseSunset(date: CalendarDate)`
 Get sunrise and sunset times for a specific date.
 
 ```javascript
@@ -140,7 +140,7 @@ const sunTimes = game.seasonsStars.api.getSunriseSunset(currentDate);
 Currently returns default values (6 AM sunrise, 6 PM sunset). This can be enhanced in future versions with calendar-specific astronomical calculations.
 :::
 
-#### `getSeasonInfo(date: CalendarDate, calendarId?: string)`
+#### `getSeasonInfo(date: CalendarDate)`
 Get season information for a specific date.
 
 ```javascript

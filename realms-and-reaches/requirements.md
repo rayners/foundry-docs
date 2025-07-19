@@ -191,7 +191,7 @@ Include this information when reporting compatibility issues:
 ## Future Compatibility
 
 ### Planned Support
-- **Foundry VTT v13+** - Fully supported and required
+- **Foundry VTT v13+** - Required for compatibility
 - **Mobile optimization** - Planned for future versions
 - **Additional integrations** - More module partnerships
 

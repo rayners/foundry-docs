@@ -97,7 +97,7 @@ When using multiple modules:
 
 ## Game System Compatibility
 
-### Fully Supported Systems
+### Verified Compatible Systems
 - ✅ **D&D 5e**: Complete integration
 - ✅ **Pathfinder 2e**: Full calendar support
 - ✅ **World Building**: Designed for custom settings
@@ -219,7 +219,7 @@ Create a minimal test setup:
 **During Migration**:
 - **Compatibility Mode**: Enable Simple Calendar compatibility
 - **Module Testing**: Test critical modules with both systems
-- **Data Conversion**: Use provided conversion tools
+- **Data Conversion**: Use migration tools when available
 
 **Post-Migration**:
 - **Verify Function**: Ensure all features work as expected
