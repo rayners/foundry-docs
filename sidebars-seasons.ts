@@ -6,6 +6,7 @@ const sidebarSeasons: SidebarsConfig = {
     'requirements',
     'installation',
     'user-guide',
+    'calendar-packs',
     {
       type: 'category',
       label: 'Migration & Planning',
