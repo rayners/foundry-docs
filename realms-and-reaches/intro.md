@@ -16,7 +16,7 @@ A Foundry VTT module that provides a queryable biome and terrain layer for narra
 - **🏷️ Flexible Tagging**: Tag-based data system supports any properties (`biome:forest`, `terrain:dense`, `travel_speed:0.75`)
 - **📤 Data Sharing**: Export/import realm data between installations and share with the community
 - **🔌 Module Integration**: Clean API for other modules to query realm data
-- **🎮 System Agnostic**: Works with any game system (D&D 5e, Pathfinder 2e, Dragonbane, etc.)
+- **🎮 System Agnostic**: Designed to work with popular game systems (D&D 5e, Pathfinder 2e, Dragonbane, etc.)
 
 ### Perfect For
 

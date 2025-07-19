@@ -10,7 +10,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 - **[ARGON Dragonbane](https://docs.rayners.dev/argon-dragonbane/intro)** - Enhanced Dragonbane RPG system support  
 - **[Realms & Reaches](https://docs.rayners.dev/realms-and-reaches/intro)** - Biome and terrain mapping system
 - **[Seasons & Stars](https://docs.rayners.dev/seasons-and-stars/intro)** - Modern calendar and timekeeping module
-- **[Simple Calendar Compatibility Bridge](https://docs.rayners.dev/simple-calendar-compat/intro)** - 100% Simple Calendar API compatibility for modern calendar modules
+- **[Simple Calendar Compatibility Bridge](https://docs.rayners.dev/simple-calendar-compat/intro)** - Simple Calendar API compatibility for modern calendar modules
 
 ### Installation
 

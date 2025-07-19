@@ -249,7 +249,7 @@ console.log('Available calendars:', calendars);
 Seasons & Stars provides a **clean integration interface** that enables compatibility with Simple Calendar-dependent modules through the **[Simple Calendar Compatibility Bridge](/simple-calendar-compat/intro)**.
 
 :::important Architecture Change
-As of v2.0+, Seasons & Stars **no longer includes Simple Calendar compatibility code**. Instead, it provides a clean integration interface that the separate **Simple Calendar Compatibility Bridge** module uses to provide 100% Simple Calendar API compatibility.
+In future versions, Seasons & Stars will provide a clean integration interface that the separate **Simple Calendar Compatibility Bridge** module uses to provide Simple Calendar API compatibility.
 :::
 
 ### Integration Interface
@@ -276,7 +276,7 @@ To use Simple Calendar-dependent modules with Seasons & Stars:
 2. **Install [Simple Calendar Compatibility Bridge](/simple-calendar-compat/installation)**
 3. **Install your Simple Calendar-dependent modules** (Simple Weather, SmallTime, etc.)
 
-The compatibility bridge provides 100% Simple Calendar API compatibility using S&S as the underlying calendar system.
+The compatibility bridge provides Simple Calendar API compatibility using S&S as the underlying calendar system.
 
 ### Integration Interface API
 
@@ -862,7 +862,7 @@ if (game.seasonsStars.notes) {
 ```
 
 :::info Notes System Status
-The notes system is **fully implemented** in S&S core with complete CRUD operations, categories, search functionality, and module flag support. It provides 100% Simple Calendar notes API compatibility.
+The notes system is implemented in S&S core with CRUD operations, categories, search functionality, and module flag support. It provides Simple Calendar notes API compatibility.
 :::
 
 ### From Custom Time Systems

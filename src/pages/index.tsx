@@ -103,7 +103,7 @@ export default function Home(): ReactNode {
             <div className="row">
               <ModuleCard
                 title="Simple Calendar Compatibility Bridge"
-                description="Provides 100% Simple Calendar API compatibility for modern calendar modules. Enables Simple Weather, SmallTime, and other modules to work with Seasons & Stars."
+                description="Provides Simple Calendar API compatibility for modern calendar modules. Enables Simple Weather, SmallTime, and other modules to work with Seasons & Stars."
                 link="/simple-calendar-compat/intro"
                 status="stable"
               />

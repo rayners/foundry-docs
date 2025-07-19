@@ -253,7 +253,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 ## 🎲 Game System Roadmap
 
 ### Immediate Support ✅
-- [x] **System Agnostic** - Works with all systems
+- [x] **System Agnostic** - Designed to work with multiple game systems
 - [x] **D&D 5e** - Full compatibility
 - [x] **Pathfinder 2e** - Full compatibility
 - [x] **Simple Worldbuilding** - Full compatibility

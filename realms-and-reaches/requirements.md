@@ -21,7 +21,7 @@ Learn about Foundry VTT compatibility, system requirements, and browser support 
 
 ### Game Systems
 
-Realms & Reaches is **system agnostic** and works with any game system:
+Realms & Reaches is **system agnostic** and designed to work with popular game systems:
 
 #### Verified Compatible
 - **D&D 5th Edition** (dnd5e)

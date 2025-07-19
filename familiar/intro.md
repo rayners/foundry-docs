@@ -26,7 +26,7 @@ Foundry Familiar brings the power of artificial intelligence directly into your 
 
 ### Key Benefits:
 - 🎯 **Context-Aware**: The AI reads your actual journal entries and world content
-- 🔄 **System Agnostic**: Works with any game system in FoundryVTT
+- 🔄 **System Agnostic**: Designed to work with popular game systems in FoundryVTT
 - 🏠 **Privacy Options**: Use local AI models or cloud services - your choice
 - ⚡ **Instant Access**: Available directly in your FoundryVTT interface
 
@@ -41,7 +41,7 @@ Foundry Familiar brings the power of artificial intelligence directly into your 
 
 - **Foundry VTT**: v13 or higher
 - **AI Service**: Ollama (tested) or OpenAI-compatible endpoint (untested)
-- **System Compatibility**: Works with any game system
+- **System Compatibility**: Designed for game system flexibility
 
 ## 🏗️ Current Status
 

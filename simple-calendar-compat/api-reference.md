@@ -5,7 +5,7 @@ title: API Reference
 
 # API Reference
 
-The Simple Calendar Compatibility Bridge implements the complete Simple Calendar API, providing 100% compatibility for modules that depend on Simple Calendar.
+The Simple Calendar Compatibility Bridge implements the Simple Calendar API, providing compatibility for modules that depend on Simple Calendar.
 
 ## Core Time Methods
 

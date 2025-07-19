@@ -30,7 +30,7 @@ The Simple Calendar Compatibility Bridge acts as a translation layer between mod
 
 This bridge enables the following modules to work with modern calendar systems:
 
-### ✅ **Fully Tested & Supported**
+### ✅ **Tested & Supported**
 - **SmallTime** - Time display widget with complete integration
 - **Simple Weather** - Weather system with core features fully working:
   - ✅ Sidebar button integration on calendar widgets
