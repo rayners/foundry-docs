@@ -6,6 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is the centralized documentation site for Foundry VTT modules, hosted at https://docs.rayners.dev using GitHub Pages.
 
+### IMPORTANT
+
+This site is referenced by users of the Foundry modules I have written. The documentation **must** by accurate, correct,
+and reflect the current released state of the modules documented. My reputation is on the line, as is yours. 
+
 ## Technology Stack
 
 - **Static Site Generator**: Docusaurus v3.7.0 with TypeScript

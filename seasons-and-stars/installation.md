@@ -129,7 +129,7 @@ Seasons & Stars is designed to work with popular Foundry modules:
 1. **Disable Simple Calendar** temporarily
 2. Test if Seasons & Stars works alone
 3. **Enable compatibility mode** if both need to run together
-4. Check for **module load order** issues
+4. Verify both modules are enabled and restart Foundry
 
 ## Getting Help
 

@@ -661,7 +661,7 @@ Flooded Areas: terrain:marshy, travel_speed:0.25, custom:underwater
 - **Hardware acceleration**: Required for best performance
 
 #### Module Conflicts
-- **Check load order**: Realms & Reaches should load before modules that depend on it
+- **Verify installation**: Ensure all modules are enabled in Module Management
 - **Disable conflicting modules**: Test with minimal module set
 - **Check console**: Look for JavaScript errors and warnings
 

@@ -15,7 +15,7 @@ A calendar and timekeeping module for Foundry VTT v13+, designed as an alternati
 - **Real-World Integration**: Gregorian calendars automatically initialize with current date/time
 - **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
 - **SmallTime Integration**: Seamless positioning and visual consistency
-- **15 Built-in Calendars**: Gregorian, D&D, Pathfinder, Critical Role, and other popular RPG calendars
+- **16 Available Calendars**: Switch between core calendars (Gregorian, Golarion PF2e) and calendar pack collections featuring D&D, Pathfinder, Critical Role, and other popular RPG calendars
 - **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
 ### 🚧 **Coming Soon**

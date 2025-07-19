@@ -258,7 +258,7 @@ If you're migrating from Simple Calendar:
 
 **Module Conflicts**:
 - Disable other calendar modules temporarily
-- Check module load order
+- Ensure all modules are enabled in Module Management
 - Test with minimal modules to isolate issues
 
 ## Advanced Usage

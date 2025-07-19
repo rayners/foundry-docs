@@ -551,7 +551,7 @@ console.log('timestampToDate test:', SimpleCalendar.api.timestampToDate(game.tim
 
 **Solutions:**
 1. Ensure Simple Calendar is disabled (conflict)
-2. Check that weather module is loading after Seasons & Stars
+2. Verify both modules are enabled in Module Management
 3. Verify weather module uses standard SC API
 4. Test with compatibility test page
 
