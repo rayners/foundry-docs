@@ -4,22 +4,25 @@ sidebar_position: 1
 
 # Seasons & Stars
 
-A calendar and timekeeping module for Foundry VTT v13+, designed as an alternative to Simple Calendar with backward compatibility.
+A calendar and timekeeping module for Foundry VTT v13+ with clean architecture and generic integration APIs. Features calendar widgets, custom calendar support, and SmallTime integration. Works with Simple Calendar-dependent modules via the Simple Calendar Compatibility Bridge.
 
 ## 🌟 Features
 
-### ✅ **Available Now (Alpha)**
-- **Clean UI**: Responsive calendar interface with ApplicationV2 architecture
+### ✅ **Available Now (Alpha v0.10.0)**
+- **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
+- **Configurable Quick Time Buttons**: Customizable time advancement buttons with live preview and dedicated mini widget controls
+- **Smart Mini Widget**: Optional time display, configurable day-of-week display, and dedicated quick time button configuration
+- **Play/Pause Time Advancement**: Time advancement controls with automatic combat pause
 - **Smart Year Navigation**: Click year to jump instantly instead of clicking arrows repeatedly
-- **Real-World Integration**: Gregorian calendars automatically initialize with current date/time
+- **Convenient Defaults**: Gregorian calendars can initialize with current date/time
+- **SmallTime Integration**: Seamless positioning and visual consistency. Time display intelligently hidden when SmallTime is present (configurable)
+- **17 Available Calendars**: Including the new Roshar calendar for Stormlight Archive campaigns, plus calendar pack collections featuring D&D, Pathfinder, Critical Role, and other popular RPG calendars
 - **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
-- **SmallTime Integration**: Seamless positioning and visual consistency
-- **16 Available Calendars**: Switch between core calendars (Gregorian, Golarion PF2e) and calendar pack collections featuring D&D, Pathfinder, Critical Role, and other popular RPG calendars
 - **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
 ### 🚧 **Coming Soon**
-- **Complete Notes Editing**: Calendar-aware note editing interface for metadata management
+- **Complete Notes UI**: Note viewing, editing, and management interface
 - **Calendar Import/Creation**: In-app calendar editor and Simple Calendar migration tools
 - **Advanced Configuration**: Enhanced calendar customization and validation
 - **Extended Integrations**: Additional module compatibility and hook enhancements
@@ -39,7 +42,7 @@ A calendar and timekeeping module for Foundry VTT v13+, designed as an alternati
 
 ## 🎯 Who Should Use This
 
-### **Alpha Testers**
+### **Beta Testers**
 - Module developers wanting to integrate calendar functionality
 - GMs who need reliable timekeeping with clean UI
 - Communities wanting to test cutting-edge calendar features
@@ -78,11 +81,14 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 
 ## 🎉 Recent Updates
 
-### **Widget Switching & UI Enhancements** (v0.2.4+)
-- ✅ **Keyboard Shortcuts**: Alt+S for default widget, Alt+Shift+S for mini, Alt+Ctrl+S for grid
-- ✅ **Scene Control Integration**: Calendar button in Journal Notes controls for easy access
-- ✅ **Cross-Widget Navigation**: Switch between widget types using header controls
-- ✅ **Enhanced Mini Widget**: Double-click to open larger view, better SmallTime positioning
+### **Latest Features** (v0.10.0 - August 2025)
+- ✅ **Always Show Quick Time Buttons**: Option to display time advancement controls permanently
+- ✅ **Enhanced Mini Widget**: Configurable day-of-week display and optional time display
+- ✅ **Dedicated Mini Widget Controls**: Separate quick time button configuration for compact view
+- ✅ **Roshar Calendar**: Support for Stormlight Archive campaigns with Brandon Sanderson's calendar system
+- ✅ **Play/Pause Time Controls**: Time advancement with automatic combat pause functionality
+- ✅ **Intercalary Day Support**: Advanced calendar features including "before" intercalary days
+- ✅ **PF2e Package**: Dedicated Pathfinder 2e integration extracted into separate package
 
 ### **SmallTime Integration Improvements**
 - ✅ **Better Detection**: Improved SmallTime element detection across different setups
@@ -103,15 +109,15 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 - Simple Calendar compatibility layer
 - Essential user features
 
-### **Phase 2: Notes Editing Enhancement** 🚧 *Next (Q3 2025)*
-- Calendar-aware note editing interface
-- Note metadata management
-- Enhanced note browser and filtering
-
-### **Phase 3: Calendar Creation & Import** 📅 *Q4 2025*
+### **Phase 2: Calendar Tools** 🚧 *Next (Q3-Q4 2025)*
 - Calendar editor and creation tools
-- Migration assistant from Simple Calendar
-- Enhanced theming and customization
+- Simple Calendar import and migration assistant
+- Enhanced calendar validation and customization
+
+### **Phase 3: Notes System Enhancement** 📅 *Future*
+- Complete notes editing interface
+- Advanced note management and search
+- Enhanced weather module integration
 
 See the complete [Roadmap](roadmap) for detailed timelines.
 

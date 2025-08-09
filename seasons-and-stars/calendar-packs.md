@@ -53,6 +53,7 @@ seasons-and-stars-mypack/
 - D&D 5e calendars (Forgotten Realms, Eberron, Greyhawk) 
 - Pathfinder (Golarion)
 - Critical Role (Exandria)
+- Stormlight Archive (Roshar calendar)
 - Dark Sun, Warhammer Fantasy, and more
 
 **Sci-Fi Calendar Pack** (`seasons-and-stars-scifi`)

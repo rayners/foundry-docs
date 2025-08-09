@@ -49,15 +49,15 @@ A comprehensive guide for migrating from Simple Calendar to Seasons & Stars, cov
 - Simple Calendar API compatibility
 - Basic weather module support
 
-#### **Phase 2** 🚧 *Q1 2025*
-- Complete notes system
-- Full weather module compatibility
-- Advanced configuration options
+#### **Phase 2** 🚧 *Q3-Q4 2025*
+- Calendar editor and creation tools
+- Simple Calendar import and migration assistant
+- Enhanced calendar validation and customization
 
-#### **Phase 3** 📅 *Q2 2025*
-- Automated migration tools
-- Calendar editor
-- Enhanced theming
+#### **Phase 3** 📅 *Future*
+- Complete notes editing interface
+- Advanced note management and search
+- Enhanced weather module integration
 
 ## 👥 For Users & GMs
 
@@ -119,10 +119,10 @@ Review your modules for calendar dependencies:
 |----------------|----------------|-------|
 | Gregorian | Gregorian | Direct match |
 | Harptos | Vale Reckoning | Similar fantasy calendar |
-| Golarian (PF) | Custom calendar | Import JSON when available |
-| Exandrian | Custom calendar | Import JSON when available |
-| Eberron | Custom calendar | Import JSON when available |
-| Custom calendars | Custom import | Phase 3 feature |
+| Golarian (PF) | Golarion PF2e | Available in fantasy pack |
+| Exandrian | Exandrian | Available in fantasy pack |
+| Eberron | Eberron | Available in fantasy pack |
+| Custom calendars | Calendar packs | JSON format, auto-detection available |
 
 #### **Date Format Changes**
 ```javascript
@@ -135,19 +135,21 @@ const ssDate = { year: 2024, month: 12, day: 25 }; // December 25th
 
 ### Feature Comparison
 
-#### ✅ **Available in Seasons & Stars**
-- ✅ Multiple calendar systems
-- ✅ Time advancement controls
-- ✅ Date/time display
-- ✅ Calendar switching
-- ✅ Basic weather module support
-- ✅ SmallTime integration
-- ✅ Year navigation (improved!)
+#### ✅ **Available in Seasons & Stars (v0.10.0)**
+- ✅ 17 calendar systems including Roshar (Stormlight Archive)
+- ✅ Configurable quick time advancement controls
+- ✅ Play/pause time advancement with automatic combat pause
+- ✅ Enhanced mini widget with time display and day-of-week options
+- ✅ Smart year navigation (click to jump instantly)
+- ✅ SmallTime integration with intelligent positioning
+- ✅ Basic notes creation (editing via journal interface)
+- ✅ Simple Calendar API compatibility
+- ✅ Calendar pack auto-detection system
 
 #### 🚧 **Coming Soon (Phase 2)**
-- 🚧 Notes/events system
-- 🚧 Complete weather module support
-- 🚧 Calendar configuration UI
+- 🚧 Calendar import/creation tools
+- 🚧 Simple Calendar migration assistant
+- 🚧 Enhanced calendar customization UI
 - 🚧 Import/export tools
 
 #### ❌ **Not Planned**

@@ -44,9 +44,11 @@ The main calendar interface with complete controls.
 
 **Features:**
 - Current date display with formatted text
-- Quick time advancement buttons (minutes, hours, days, weeks, months)
+- Configurable quick time advancement buttons with live preview
+- Play/pause time advancement controls with automatic combat pause
 - Calendar selection dropdown
 - "Today" button to jump to current date
+- Always show quick time buttons option
 - Seasonal and time-of-day indicators
 
 **How to Access:**
@@ -58,6 +60,9 @@ A compact calendar companion that works alongside SmallTime.
 
 **Features:**
 - Displays current date in compact format
+- Optional time display (configurable)
+- Configurable day-of-week display
+- Dedicated quick time button configuration
 - Click to open full calendar widget
 - Automatically positions relative to SmallTime
 - Minimal screen space usage
@@ -126,6 +131,12 @@ Each calendar shows:
 
 ### Fantasy Calendars
 
+**Roshar Calendar** (Stormlight Archive)
+- Based on Brandon Sanderson's Stormlight Archive series
+- 10 months of 50 days each (500-day year)
+- Unique Vorin calendar system with cultural context
+- Perfect for campaigns in the Stormlight Archive setting
+
 **Vale Reckoning** (Example Fantasy Calendar)
 - Custom month names reflecting fantasy world
 - Unique cultural holidays and seasons
@@ -153,6 +164,10 @@ Seasons & Stars integrates with Foundry's native time system:
 
 **Time Advancement**:
 - Use widget controls for quick time changes
+- Configurable quick time buttons with live preview
+- Play/pause controls for time advancement
+- Automatic combat pause (optional)
+- Dedicated mini widget time controls
 - Precise control over minutes, hours, and days
 - All players see updates automatically
 
@@ -188,6 +203,9 @@ Access through **Settings** → **Module Settings** → **Seasons & Stars**:
 |---------|-------------|---------|
 | **Active Calendar** | Which calendar to use | List of available calendars |
 | **Show Time Widget** | Display calendar widget | Enabled / Disabled |
+| **Always Show Quick Time Buttons** | Show time controls permanently | Enabled / Disabled |
+| **Mini Widget Time Display** | Show time in mini widget | Enabled / Disabled |
+| **Mini Widget Day Display** | Show day-of-week in mini widget | Enabled / Disabled |
 | **Simple Calendar Compatibility** | API compatibility mode | Enabled / Disabled |
 
 ### User Preferences

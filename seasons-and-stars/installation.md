@@ -22,7 +22,7 @@ This guide will help you install and configure Seasons & Stars for your Foundry 
 
 ### Method 2: Manifest URL
 
-If Seasons & Stars isn't available in the module browser yet:
+For pre-release versions or if not available in the module browser:
 
 1. Go to **Settings** → **Manage Modules**
 2. Click **Install Module**
