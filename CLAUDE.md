@@ -26,20 +26,24 @@ and reflect the current released state of the modules documented. My reputation 
 /
 ├── journeys-and-jamborees/    # J&J module documentation
 ├── argon-dragonbane/         # ARGON module documentation
+├── realms-and-reaches/       # Realms & Reaches module documentation
+├── seasons-and-stars/        # Seasons & Stars module documentation
+├── simple-calendar-compat/   # Calendar Compat module documentation
+├── errors-and-echoes/        # Errors & Echoes module documentation
+├── familiar/                 # Foundry Familiar module documentation
 ├── src/                      # React components and pages
 ├── static/                   # Static assets (images, etc.)
-├── sidebars-jj.ts           # J&J sidebar configuration
-├── sidebars-argon.ts        # ARGON sidebar configuration
+├── sidebars-*.ts            # Module-specific sidebar configurations
 └── docusaurus.config.ts     # Main site configuration
 ```
 
 ## Multi-Module Setup
 
 Each module has its own documentation instance configured in `docusaurus.config.ts`:
-- Separate routing (`/journeys-and-jamborees`, `/argon-dragonbane`)
-- Independent sidebars configured in `sidebars-jj.ts` and `sidebars-argon.ts`
+- Separate routing for each module (`/journeys-and-jamborees`, `/argon-dragonbane`, `/realms-and-reaches`, etc.)
+- Independent sidebars configured in `sidebars-[module].ts` files
 - Module-specific navigation items in the navbar
-- Custom theme with module-specific accent colors (purple for J&J, red for ARGON)
+- Custom theme with module-specific configuration
 - Default docs and blog plugins are disabled
 
 ## Development Commands
@@ -70,7 +74,8 @@ To add a new module:
 2. Add a new docs plugin instance in `docusaurus.config.ts`
 3. Create a sidebar configuration file (`sidebars-[module].ts`)
 4. Add navigation item to the navbar
-5. Update the landing page with a module card
+5. Add footer link in the theme configuration
+6. Update the landing page with a module card
 
 ## Content Guidelines
 
@@ -107,13 +112,6 @@ To add a new module:
 - The landing page (`src/pages/index.tsx`) displays module cards with status badges
 - Custom CSS in `src/css/custom.css` implements the slate gray theme with hover effects
 
-## Linear Integration
-
-Documentation work is tracked in Linear:
-- Team: Foundry Modules
-- Project: Documentation Site Infrastructure
-- Related issues: FOU-37, FOU-38, FOU-39, FOU-40, FOU-41
-
 ## Testing and Validation
 
 **ALWAYS run `npm run build` locally before committing to prevent deployment failures!**
@@ -140,90 +138,36 @@ Before deploying:
 3. **Missing image files**: Referenced images that don't exist in `/static/img/`
 4. **Relative parent directory links**: Any `../` links outside the docs structure
 
-## Current Project Status
-
-### Completed Issues
-- **FOU-37** ✅ - GitHub Pages setup and domain configuration
-- **FOU-38** ✅ - Docusaurus implementation with custom theme
-
-### In Progress
-- **FOU-39** - Migrate J&J documentation to docs site
-  - Copy README content to main module page
-  - Migrate User Guide to docs site structure
-  - Move Localization Guide with proper formatting
-  - Update J&J README to link to docs site
-
-### Upcoming
-- **FOU-40** - Set up automated builds and deployment
-- **FOU-41** - Create landing page and multi-module navigation
-- **FOU-43** - Create comprehensive documentation for ARGON Dragonbane
-
 ## Module Documentation Status
 
-### Journeys and Jamborees (`/journeys-and-jamborees`)
-- Status: Development (purple badge)
-- 11 documentation files covering installation, quick start, API reference, etc.
-- Comprehensive travel system and party management documentation
+The site currently hosts documentation for 7 Foundry VTT modules:
 
-### ARGON Dragonbane (`/argon-dragonbane`)
-- Status: Stable (red badge)
-- Basic documentation with intro, requirements, and installation
-- Released for over a year, needs expanded documentation (FOU-43)
+### Core Modules
+- **Journeys & Jamborees** (`/journeys-and-jamborees`) - Party management and travel mechanics
+- **Realms & Reaches** (`/realms-and-reaches`) - Biome and terrain exploration system
+- **Seasons & Stars** (`/seasons-and-stars`) - Calendar and timekeeping system
+
+### Utility Modules
+- **ARGON Dragonbane** (`/argon-dragonbane`) - Dragonbane game system enhancements
+- **Simple Calendar Compat** (`/simple-calendar-compat`) - Calendar compatibility layer
+- **Errors & Echoes** (`/errors-and-echoes`) - Error reporting and debugging assistance
+- **Foundry Familiar** (`/familiar`) - Simple utility module
+
+Each module has its own documentation structure with intro pages, installation guides, API references, and user guides as appropriate for the module's complexity.
+
+## Development Context
+
+The `dev-context/` directory contains development standards and patterns:
+- **Documentation Standards** - Guidelines for technical writing and accuracy
+- **Module Architecture Patterns** - Reusable patterns for FoundryVTT modules
+- **Testing Practices** - Comprehensive testing guidelines and standards
+- **Foundry Development Practices** - Best practices for FoundryVTT development
+
+These files provide additional context for maintaining quality and consistency across all module documentation.
 
 ## GitHub Actions Workflow
 
-The workflow file (`deploy.yml`) needs to be manually added to `.github/workflows/` due to OAuth permissions:
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  build:
-    name: Build Docusaurus
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-        
-      - name: Build website
-        run: npm run build
-
-      - name: Upload Build Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    if: github.ref == 'refs/heads/main'
-    
-    permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-```
+The site has automated deployment set up via GitHub Actions:
+- **Deploy workflow** (`.github/workflows/deploy.yml`) - Builds and deploys to GitHub Pages on pushes to main
+- **Lighthouse CI** (`.github/workflows/lighthouse-ci.yml`) - Runs performance and accessibility audits
+- All deployments are automatic when changes are pushed to the main branch
