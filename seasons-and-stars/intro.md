@@ -21,7 +21,7 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 - **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
 - **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
-### 🚧 **Coming Soon**
+### 🚧 **In Development**
 - **Complete Notes UI**: Note viewing, editing, and management interface
 - **Calendar Import/Creation**: In-app calendar editor and Simple Calendar migration tools
 - **Advanced Configuration**: Enhanced calendar customization and validation
@@ -81,7 +81,7 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 
 ## 🎉 Recent Updates
 
-### **Latest Features** (v0.10.0 - August 2025)
+### **Latest Features** (v0.10.0 - August 2024)
 - ✅ **Always Show Quick Time Buttons**: Option to display time advancement controls permanently
 - ✅ **Enhanced Mini Widget**: Configurable day-of-week display and optional time display
 - ✅ **Dedicated Mini Widget Controls**: Separate quick time button configuration for compact view
@@ -109,12 +109,12 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 - Simple Calendar compatibility layer
 - Essential user features
 
-### **Phase 2: Calendar Tools** 🚧 *Next (Q3-Q4 2025)*
+### **Phase 2: Calendar Tools** 🚧 *In Progress (Q3-Q4 2024)*
 - Calendar editor and creation tools
 - Simple Calendar import and migration assistant
 - Enhanced calendar validation and customization
 
-### **Phase 3: Notes System Enhancement** 📅 *Future*
+### **Phase 3: Notes System Enhancement** 📅 *Planned*
 - Complete notes editing interface
 - Advanced note management and search
 - Enhanced weather module integration

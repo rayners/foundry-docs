@@ -67,7 +67,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 
 ---
 
-## ✅ Phase 2: Core Integration (Q4 2024 - COMPLETE)
+## ✅ Phase 2: Core Integration (Q1 2024 - COMPLETE)
 *Enhanced Compatibility Release*
 
 ### Notes System (Basic) ✅
@@ -167,7 +167,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 - **UI/UX Improvements**: Enhanced widget interfaces and user experience refinements
 - **Date Context Menus**: Right-click context menus for calendar dates with additional actions and information
 
-### **v1.0.0 - Stable Release** (Future)
+### **v1.0.0 - Stable Release** (2025)
 
 **Focus**: Production stability and feature completeness
 
@@ -212,7 +212,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 
 ---
 
-## 🔮 Phase 4: Community & Ecosystem (Q3 2025)
+## 🔮 Phase 4: Community & Ecosystem (Q1 2025)
 *Ecosystem Expansion*
 
 ### Community Features 📋
@@ -374,7 +374,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 
 ---
 
-## 📈 Long-term Vision (2025+)
+## 📈 Long-term Vision (2026+)
 
 ### **Advanced Calendar Features**
 Seasons & Stars aims to become the definitive calendar and timekeeping solution for Foundry VTT, focusing on:

@@ -49,12 +49,12 @@ A comprehensive guide for migrating from Simple Calendar to Seasons & Stars, cov
 - Simple Calendar API compatibility
 - Basic weather module support
 
-#### **Phase 2** 🚧 *Q3-Q4 2025*
+#### **Phase 2** 🚧 *Q3-Q4 2024*
 - Calendar editor and creation tools
 - Simple Calendar import and migration assistant
 - Enhanced calendar validation and customization
 
-#### **Phase 3** 📅 *Future*
+#### **Phase 3** 📅 *2025*
 - Complete notes editing interface
 - Advanced note management and search
 - Enhanced weather module integration
