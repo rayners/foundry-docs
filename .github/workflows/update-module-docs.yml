@@ -51,7 +51,7 @@ jobs:
               echo "repo_name=fvtt-journeys-and-jamborees" >> $GITHUB_OUTPUT
               ;;
             "argon-dragonbane")
-              echo "repo_name=fvtt-argon" >> $GITHUB_OUTPUT
+              echo "repo_name=enhancedcombathud-dragonbane" >> $GITHUB_OUTPUT
               ;;
             "realms-and-reaches")
               echo "repo_name=fvtt-realms-and-reaches" >> $GITHUB_OUTPUT
@@ -60,7 +60,7 @@ jobs:
               echo "repo_name=fvtt-seasons-and-stars" >> $GITHUB_OUTPUT
               ;;
             "simple-calendar-compat")
-              echo "repo_name=fvtt-simple-calendar-compat" >> $GITHUB_OUTPUT
+              echo "repo_name=foundryvtt-simple-calendar-compat" >> $GITHUB_OUTPUT
               ;;
             "errors-and-echoes")
               echo "repo_name=fvtt-errors-and-echoes" >> $GITHUB_OUTPUT
