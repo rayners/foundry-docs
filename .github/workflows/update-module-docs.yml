@@ -20,6 +20,8 @@ on:
         required: false
         type: boolean
         default: true
+  repository_dispatch:
+    types: [update-docs]
 
 jobs:
   update-docs:
@@ -44,10 +46,23 @@ jobs:
           path: dev-context
           fetch-depth: 1
 
+      - name: Set module name from input or dispatch
+        id: module-name
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MODULE_NAME="${{ github.event.inputs.module_name }}"
+            CREATE_PR="${{ github.event.inputs.create_pr }}"
+          else
+            MODULE_NAME="${{ github.event.client_payload.module_name }}"
+            CREATE_PR="true"
+          fi
+          echo "module_name=$MODULE_NAME" >> $GITHUB_OUTPUT
+          echo "create_pr=$CREATE_PR" >> $GITHUB_OUTPUT
+
       - name: Determine module repository name
         id: module-repo
         run: |
-          case "${{ github.event.inputs.module_name }}" in
+          case "${{ steps.module-name.outputs.module_name }}" in
             "journeys-and-jamborees")
               echo "repo_name=fvtt-journeys-and-jamborees" >> $GITHUB_OUTPUT
               ;;
@@ -70,7 +85,7 @@ jobs:
               echo "repo_name=fvtt-familiar" >> $GITHUB_OUTPUT
               ;;
             *)
-              echo "Unknown module: ${{ github.event.inputs.module_name }}"
+              echo "Unknown module: ${{ steps.module-name.outputs.module_name }}"
               exit 1
               ;;
           esac
@@ -97,18 +112,18 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
-            Validate and update the documentation for module "${{ github.event.inputs.module_name }}" following these steps:
+            Validate and update the documentation for module "${{ steps.module-name.outputs.module_name }}" following these steps:
 
             ## Context
             - Documentation site repository: Current working directory
             - Module source code: ./module-source/ directory
             - Development standards: ./dev-context/ directory
-            - Module documentation location: ./${{ github.event.inputs.module_name }}/
+            - Module documentation location: ./${{ steps.module-name.outputs.module_name }}/
 
             ## Validation and Update Tasks
 
             ### 1. Use the /validate-docs slash command
-            Run: `/validate-docs ${{ github.event.inputs.module_name }}`
+            Run: `/validate-docs ${{ steps.module-name.outputs.module_name }}`
 
             ### 2. Cross-reference with module source
             - Check module-source/README.md for current features and status
@@ -130,8 +145,8 @@ jobs:
             ### 5. Create Pull Request
             If changes were made:
             - Configure git user: `git config user.name "github-actions[bot]"` and `git config user.email "github-actions[bot]@users.noreply.github.com"`
-            - Create and switch to a new branch: `git checkout -b docs/update-${{ github.event.inputs.module_name }}-$(date +%Y%m%d-%H%M%S)`
-            - Stage and commit changes with message: "docs(${{ github.event.inputs.module_name }}): automated documentation update"
+            - Create and switch to a new branch: `git checkout -b docs/update-${{ steps.module-name.outputs.module_name }}-$(date +%Y%m%d-%H%M%S)`
+            - Stage and commit changes with message: "docs(${{ steps.module-name.outputs.module_name }}): automated documentation update"
             - Push the branch: `git push origin [branch-name]`
             - Create PR using `gh pr create` with appropriate title and description
 
