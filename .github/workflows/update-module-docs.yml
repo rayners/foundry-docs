@@ -91,13 +91,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create update branch
-        if: github.event.inputs.create_pr == 'true'
-        run: |
-          BRANCH_NAME="docs/update-${{ github.event.inputs.module_name }}-$(date +%Y%m%d-%H%M%S)"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-          git checkout -b $BRANCH_NAME
-
       - name: Run Claude Code to validate and update documentation
         id: claude
         uses: anthropics/claude-code-action@v1
@@ -134,78 +127,23 @@ jobs:
             - Run `npm run build` to ensure site builds successfully
             - Check that updated documentation integrates properly
 
-            ### 5. Summary Report
+            ### 5. Create Pull Request
+            If changes were made:
+            - Configure git user: `git config user.name "github-actions[bot]"` and `git config user.email "github-actions[bot]@users.noreply.github.com"`
+            - Create and switch to a new branch: `git checkout -b docs/update-${{ github.event.inputs.module_name }}-$(date +%Y%m%d-%H%M%S)`
+            - Stage and commit changes with message: "docs(${{ github.event.inputs.module_name }}): automated documentation update"
+            - Push the branch: `git push origin [branch-name]`
+            - Create PR using `gh pr create` with appropriate title and description
+
+            ### 6. Summary Report
             Provide a summary of:
             - Issues found and fixed
             - Content updated or corrected
+            - Whether a PR was created or no changes were needed
             - Any recommendations for future maintenance
 
             Follow the quality standards from dev-context/documentation-standards.md and dev-context/foundry-development-practices.md.
 
-          claude_args: '--allowed-tools "Bash(npm:*),Bash(git:*),Bash(date:*),Read,Write,Edit,Grep,Glob"'
-
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
-          if git diff --quiet; then
-            echo "No changes to commit"
-            echo "changes_made=false" >> $GITHUB_ENV
-          else
-            git add .
-            git commit -m "docs(${{ github.event.inputs.module_name }}): automated documentation update
-
-            - Validated against current module source
-            - Applied documentation quality standards
-            - Fixed accuracy and formatting issues
-
-            🤖 Generated with [Claude Code](https://claude.ai/code)
-
-            Co-Authored-By: Claude <noreply@anthropic.com>"
-            echo "changes_made=true" >> $GITHUB_ENV
-          fi
-
-      - name: Push branch and create PR
-        if: github.event.inputs.create_pr == 'true' && env.changes_made == 'true'
-        run: |
-          git push origin ${{ env.BRANCH_NAME }}
-
-          gh pr create \
-            --title "docs(${{ github.event.inputs.module_name }}): automated documentation update" \
-            --body "## Automated Documentation Update
-
-          This PR contains automated updates to the ${{ github.event.inputs.module_name }} documentation based on:
-          - Current module source code validation
-          - Documentation quality standards from dev-context
-          - Link and formatting fixes
-          - Date accuracy verification
-
-          ### Changes Made
-          - Applied documentation standards from dev-context/
-          - Validated against module source in rayners/${{ steps.module-repo.outputs.repo_name }}
-          - Fixed any accuracy, formatting, or link issues found
-
-          ### Review Checklist
-          - [ ] Documentation accurately reflects current module capabilities
-          - [ ] No hyperbolic or unverified claims remain
-          - [ ] All links and images work correctly
-          - [ ] Site builds successfully (\`npm run build\`)
-
-          🤖 Generated with [Claude Code](https://claude.ai/code)" \
-            --head ${{ env.BRANCH_NAME }} \
-            --base main
+          claude_args: '--allowed-tools "Bash(npm:*),Bash(git:*),Bash(gh pr create:*),Bash(date:*),Read,Write,Edit,Grep,Glob"'
         env:
           GH_TOKEN: ${{ github.token }}
-
-      - name: Output summary
-        run: |
-          if [ "${{ env.changes_made }}" = "true" ]; then
-            if [ "${{ github.event.inputs.create_pr }}" = "true" ]; then
-              echo "✅ Documentation updated and PR created for ${{ github.event.inputs.module_name }}"
-            else
-              echo "✅ Documentation updated for ${{ github.event.inputs.module_name }}"
-            fi
-          else
-            echo "ℹ️ No documentation changes needed for ${{ github.event.inputs.module_name }}"
-          fi
