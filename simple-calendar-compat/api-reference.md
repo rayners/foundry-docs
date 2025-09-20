@@ -5,7 +5,7 @@ title: API Reference
 
 # API Reference
 
-The Simple Calendar Compatibility Bridge implements the Simple Calendar API, providing compatibility for modules that depend on Simple Calendar.
+The Simple Calendar Compatibility Bridge implements most of the Simple Calendar API, providing compatibility for modules that depend on Simple Calendar.
 
 ## Core Time Methods
 
@@ -26,7 +26,7 @@ console.log(`Today is ${dateInfo.display.monthName} ${dateInfo.display.day}${dat
 // Output: "Today is December 25th"
 ```
 
-**Returns**: Complete date object with display formatting properties:
+**Returns**: Date object with display formatting properties:
 - `year`, `month`, `day` - Numeric date values (0-based month/day for SC compatibility)
 - `hour`, `minute`, `second` - Time components
 - `dayOfTheWeek` - Day of week (0-based)
@@ -35,7 +35,7 @@ console.log(`Today is ${dateInfo.display.monthName} ${dateInfo.display.day}${dat
 - `currentSeason` - Season information with icon
 
 ### `getCurrentDate(): SimpleCalendarDate`
-Gets the current calendar date with full formatting.
+Gets the current calendar date with formatting.
 
 ```javascript
 const today = SimpleCalendar.api.getCurrentDate();

@@ -164,7 +164,7 @@ console.log('S&S API:', !!game.seasonsStars?.api);
 **Symptoms**: Modules report missing Simple Calendar methods
 
 **Solutions**:
-1. **Full API**: The bridge implements complete Simple Calendar API
+1. **Extensive API**: The bridge implements most of the Simple Calendar API
 2. **Method Names**: Check for typos in method names
 3. **Timing**: Ensure API is ready before calling methods
 
