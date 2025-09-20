@@ -81,21 +81,14 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 
 ## 🎉 Recent Updates
 
-### **Latest Features** (v0.7.0 - July 2025)
+### **Current Release** (v0.16.0)
 - ✅ **JSON Schema Validation**: Calendar format validation system for reliable calendar data
 - ✅ **External Calendar Loading**: Hook system for modules to register calendars programmatically
 - ✅ **Calendar Pack Auto-Detection**: Automatic discovery of calendar modules with `seasons-and-stars-*` naming
 - ✅ **Dark Sun Calendar Updates**: Canon moon colors and cycles for authentic Dark Sun campaigns
 - ✅ **Module URL Protocol**: Support for `module:module-id` URL references in calendar loading
-
-### **SmallTime Integration Improvements**
-- ✅ **Better Detection**: Improved SmallTime element detection across different setups
-- ✅ **Visual Consistency**: Styling matches SmallTime background for seamless integration
-- ✅ **Smart Positioning**: Positions above SmallTime with player list fallback
-- ✅ **Performance**: Direct instance tracking for faster response times
-
-### **Production Features** (v0.2.0+)
-- ✅ **Error Handling**: Better logging and graceful failure recovery
+- ✅ **SmallTime Integration Improvements**: Better detection and visual consistency
+- ✅ **Enhanced Error Handling**: Better logging and graceful failure recovery
 - ✅ **Input Validation**: API protection with helpful error messages
 - ✅ **TypeScript Support**: Type definitions for reliable development
 - ✅ **Testing**: Comprehensive test suite with reliable widget API coverage
