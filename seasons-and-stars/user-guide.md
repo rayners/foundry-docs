@@ -6,16 +6,6 @@ sidebar_position: 4
 
 A comprehensive guide to using Seasons & Stars for calendar and time management in Foundry VTT.
 
-## 📚 Table of Contents
-
-- [Getting Started](#getting-started)
-- [Calendar Views](#calendar-views)
-- [Time Management](#time-management)
-- [Calendar Selection](#calendar-selection)
-- [Settings & Configuration](#settings--configuration)
-- [SmallTime Integration](#smalltime-integration)
-- [Troubleshooting](#troubleshooting)
-
 ## 🚀 Getting Started
 
 ### Installation

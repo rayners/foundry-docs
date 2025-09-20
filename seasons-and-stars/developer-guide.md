@@ -6,17 +6,6 @@ title: Developer Guide
 
 Complete API reference and integration guide for module developers working with Seasons & Stars.
 
-## 📚 Table of Contents
-
-- [Getting Started](#getting-started)
-- [Core API](#core-api)
-- [Simple Calendar Compatibility](#simple-calendar-compatibility)
-- [Hook System](#hook-system)
-- [Calendar Data Structures](#calendar-data-structures)
-- [Integration Examples](#integration-examples)
-- [Migration Guide](#migration-guide)
-- [Best Practices](#best-practices)
-
 ## 🚀 Getting Started
 
 ### API Access
