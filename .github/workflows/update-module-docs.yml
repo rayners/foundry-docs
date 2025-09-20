@@ -33,8 +33,9 @@ jobs:
       - name: Checkout documentation repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Checkout dev-context repository
         uses: actions/checkout@v4
