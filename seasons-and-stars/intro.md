@@ -17,7 +17,7 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 - **Smart Year Navigation**: Click year to jump instantly instead of clicking arrows repeatedly
 - **Convenient Defaults**: Gregorian calendars can initialize with current date/time
 - **SmallTime Integration**: Seamless positioning and visual consistency. Time display intelligently hidden when SmallTime is present (configurable)
-- **16+ Available Calendars**: Core calendars plus calendar pack collections featuring D&D, Pathfinder, Critical Role, sci-fi calendars (Star Trek, Starfinder, Traveller), and custom formats
+- **16+ Available Calendars**: Core calendars plus calendar pack collections featuring D&D (Forgotten Realms, Eberron), Pathfinder (Golarion), Critical Role (Exandria), Roshar (Stormlight Archive), sci-fi calendars (Star Trek, Starfinder, Traveller), and custom formats
 - **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
 - **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
