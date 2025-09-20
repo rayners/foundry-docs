@@ -8,7 +8,7 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 
 ## 🌟 Features
 
-### ✅ **Available Now (Alpha v0.10.0)**
+### ✅ **Available Now (v0.16.0)**
 - **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
 - **Configurable Quick Time Buttons**: Customizable time advancement buttons with live preview and dedicated mini widget controls
@@ -17,7 +17,7 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 - **Smart Year Navigation**: Click year to jump instantly instead of clicking arrows repeatedly
 - **Convenient Defaults**: Gregorian calendars can initialize with current date/time
 - **SmallTime Integration**: Seamless positioning and visual consistency. Time display intelligently hidden when SmallTime is present (configurable)
-- **17 Available Calendars**: Including the new Roshar calendar for Stormlight Archive campaigns, plus calendar pack collections featuring D&D, Pathfinder, Critical Role, and other popular RPG calendars
+- **16+ Available Calendars**: Core calendars plus calendar pack collections featuring D&D (Forgotten Realms, Eberron), Pathfinder (Golarion), Critical Role (Exandria), Roshar (Stormlight Archive), sci-fi calendars (Star Trek, Starfinder, Traveller), and custom formats
 - **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
 - **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
@@ -76,28 +76,19 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 ## 📋 Requirements
 
 - **Foundry VTT**: v13 or higher
-- **Compatibility**: All game systems (system-agnostic design)
+- **Compatibility**: System-agnostic design compatible with Foundry's game systems
 - **Permissions**: GM required for time changes
 
 ## 🎉 Recent Updates
 
-### **Latest Features** (v0.10.0 - August 2025)
-- ✅ **Always Show Quick Time Buttons**: Option to display time advancement controls permanently
-- ✅ **Enhanced Mini Widget**: Configurable day-of-week display and optional time display
-- ✅ **Dedicated Mini Widget Controls**: Separate quick time button configuration for compact view
-- ✅ **Roshar Calendar**: Support for Stormlight Archive campaigns with Brandon Sanderson's calendar system
-- ✅ **Play/Pause Time Controls**: Time advancement with automatic combat pause functionality
-- ✅ **Intercalary Day Support**: Advanced calendar features including "before" intercalary days
-- ✅ **PF2e Package**: Dedicated Pathfinder 2e integration extracted into separate package
-
-### **SmallTime Integration Improvements**
-- ✅ **Better Detection**: Improved SmallTime element detection across different setups
-- ✅ **Visual Consistency**: Styling matches SmallTime background for seamless integration
-- ✅ **Smart Positioning**: Positions above SmallTime with player list fallback
-- ✅ **Performance**: Direct instance tracking for faster response times
-
-### **Production Features** (v0.2.0+)
-- ✅ **Error Handling**: Better logging and graceful failure recovery
+### **Current Release** (v0.16.0)
+- ✅ **JSON Schema Validation**: Calendar format validation system for reliable calendar data
+- ✅ **External Calendar Loading**: Hook system for modules to register calendars programmatically
+- ✅ **Calendar Pack Auto-Detection**: Automatic discovery of calendar modules with `seasons-and-stars-*` naming
+- ✅ **Dark Sun Calendar Updates**: Canon moon colors and cycles for authentic Dark Sun campaigns
+- ✅ **Module URL Protocol**: Support for `module:module-id` URL references in calendar loading
+- ✅ **SmallTime Integration Improvements**: Better detection and visual consistency
+- ✅ **Enhanced Error Handling**: Better logging and graceful failure recovery
 - ✅ **Input Validation**: API protection with helpful error messages
 - ✅ **TypeScript Support**: Type definitions for reliable development
 - ✅ **Testing**: Comprehensive test suite with reliable widget API coverage
@@ -109,7 +100,7 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 - Simple Calendar compatibility layer
 - Essential user features
 
-### **Phase 2: Calendar Tools** 🚧 *Next (Q3-Q4 2025)*
+### **Phase 2: Calendar Tools** 🚧 *In Progress*
 - Calendar editor and creation tools
 - Simple Calendar import and migration assistant
 - Enhanced calendar validation and customization

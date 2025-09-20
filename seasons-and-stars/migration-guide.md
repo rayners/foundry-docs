@@ -6,16 +6,6 @@ title: Migration Guide
 
 A comprehensive guide for migrating from Simple Calendar to Seasons & Stars, covering users, GMs, and module developers.
 
-## 📚 Table of Contents
-
-- [Why Migrate?](#why-migrate)
-- [For Users & GMs](#for-users--gms)
-- [For Module Developers](#for-module-developers)
-- [Data Migration](#data-migration)
-- [Compatibility Matrix](#compatibility-matrix)
-- [Troubleshooting](#troubleshooting)
-- [Rollback Plan](#rollback-plan)
-
 ## 🎯 Why Migrate?
 
 ### Benefits of Seasons & Stars
@@ -135,8 +125,8 @@ const ssDate = { year: 2024, month: 12, day: 25 }; // December 25th
 
 ### Feature Comparison
 
-#### ✅ **Available in Seasons & Stars (v0.10.0)**
-- ✅ 17 calendar systems including Roshar (Stormlight Archive)
+#### ✅ **Available in Seasons & Stars (v0.16.0)**
+- ✅ 16+ calendar systems including Roshar (Stormlight Archive)
 - ✅ Configurable quick time advancement controls
 - ✅ Play/pause time advancement with automatic combat pause
 - ✅ Enhanced mini widget with time display and day-of-week options

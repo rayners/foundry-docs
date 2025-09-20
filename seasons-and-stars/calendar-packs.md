@@ -140,7 +140,7 @@ Developers can create calendar packs using these key requirements:
 
 #### Individual Calendars
 
-Each calendar file follows the standard [calendar format](developer-guide#calendar-data-structures) with additional metadata:
+Each calendar file follows the standard calendar format described in the [Developer Guide](developer-guide) with additional metadata:
 
 ```json
 {
