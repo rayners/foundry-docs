@@ -105,10 +105,10 @@ If you're migrating from Simple Calendar:
 
 Seasons & Stars is designed to work with popular Foundry modules:
 
-- ✅ **Foundry modules using the Simple Calendar API**
-- ✅ **Combat and time-tracking modules**  
-- ✅ **Weather and environment modules**
-- ✅ **Journey and travel modules**
+- ✅ **Weather modules**: Simple Weather and others through compatibility bridge
+- ✅ **Combat modules**: Standard combat and time-tracking modules
+- ✅ **SmallTime**: Enhanced timekeeping integration
+- ✅ **Journey modules**: Travel and time advancement systems
 
 ## Troubleshooting
 
