@@ -28,8 +28,9 @@ For pre-release versions or if not available in the module browser:
 2. Click **Install Module**
 3. Paste this manifest URL in the **Manifest URL** field:
    ```
-   https://github.com/rayners/fvtt-seasons-and-stars/releases/latest/download/module.json
+   https://github.com/rayners/fvtt-seasons-and-stars/releases/download/v0.7.0/module.json
    ```
+   *(Note: Check [GitHub](https://github.com/rayners/fvtt-seasons-and-stars/releases) for the latest version)*
 4. Click **Install**
 5. **Enable the module** in your world
 
