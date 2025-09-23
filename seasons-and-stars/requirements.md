@@ -103,11 +103,11 @@ When using multiple modules:
 - ✅ **World Building**: Designed for custom settings
 - ✅ **Simple Worldbuilding**: Perfect for homebrew
 
-### Tested Systems
-- ✅ **Forbidden Lands**: Calendar integration tested
-- ✅ **Dragonbane**: Compatible with ARGON modules
-- ✅ **Savage Worlds**: Basic time tracking works
-- ✅ **Fate Core**: Calendar features functional
+### Additional Compatible Systems
+- **Forbidden Lands**: Calendar integration compatible
+- **Dragonbane**: Compatible with ARGON modules
+- **Savage Worlds**: Basic time tracking compatible
+- **Fate Core**: Calendar features functional
 
 ### Universal Compatibility
 Seasons & Stars is **system-agnostic** and should work with any game system that:
