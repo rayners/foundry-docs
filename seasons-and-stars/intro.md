@@ -8,7 +8,7 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 
 ## 🌟 Features
 
-### ✅ **Available Now (v0.16.0)**
+### ✅ **Available Now (v0.7.0)**
 - **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
 - **Configurable Quick Time Buttons**: Customizable time advancement buttons with live preview and dedicated mini widget controls
@@ -48,7 +48,7 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 - Communities wanting to test cutting-edge calendar features
 
 ### **Migration Candidates**
-- Users seeking a calendar solution for Foundry v13+
+- Users seeking a calendar solution built for Foundry v13+
 - Users wanting better SmallTime integration
 - Communities needing custom calendar support
 
@@ -76,12 +76,12 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 ## 📋 Requirements
 
 - **Foundry VTT**: v13 or higher
-- **Compatibility**: System-agnostic design compatible with Foundry's game systems
+- **Compatibility**: Designed to work with D&D 5e, PF2e, Dragonbane, and other tested systems
 - **Permissions**: GM required for time changes
 
 ## 🎉 Recent Updates
 
-### **Current Release** (v0.16.0)
+### **Current Release** (v0.7.0)
 - ✅ **JSON Schema Validation**: Calendar format validation system for reliable calendar data
 - ✅ **External Calendar Loading**: Hook system for modules to register calendars programmatically
 - ✅ **Calendar Pack Auto-Detection**: Automatic discovery of calendar modules with `seasons-and-stars-*` naming
@@ -100,12 +100,12 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 - Simple Calendar compatibility layer
 - Essential user features
 
-### **Phase 2: Calendar Tools** 🚧 *In Progress*
+### **Phase 2: Calendar Tools** 🚧 *Next (Planned)*
 - Calendar editor and creation tools
 - Simple Calendar import and migration assistant
 - Enhanced calendar validation and customization
 
-### **Phase 3: Notes System Enhancement** 📅 *Future*
+### **Phase 3: Notes System Enhancement** 📅 *Future (2026)*
 - Complete notes editing interface
 - Advanced note management and search
 - Enhanced weather module integration
