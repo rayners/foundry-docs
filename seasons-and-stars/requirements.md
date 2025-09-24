@@ -98,10 +98,10 @@ When using multiple modules:
 ## Game System Compatibility
 
 ### Verified Compatible Systems
-- ✅ **D&D 5e**: Complete integration
+- ✅ **D&D 5e**: Comprehensive integration
 - ✅ **Pathfinder 2e**: Full calendar support
 - ✅ **World Building**: Designed for custom settings
-- ✅ **Simple Worldbuilding**: Perfect for homebrew
+- ✅ **Simple Worldbuilding**: Ideal for homebrew
 
 ### Tested Systems
 - ✅ **Forbidden Lands**: Calendar integration tested
