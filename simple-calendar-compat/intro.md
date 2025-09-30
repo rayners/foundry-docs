@@ -13,12 +13,12 @@ The Simple Calendar Compatibility Bridge acts as a translation layer between mod
 
 ## Key Features
 
-- **Extensive API Coverage**: Implements most of the Simple Calendar API surface (50+ methods)
+- **Complete API Coverage**: Implements the full Simple Calendar API surface (50+ methods)
 - **Automatic Detection**: Uses S&S Integration Interface for seamless integration
-- **Hook Bridging**: Translates between S&S hooks and Simple Calendar hook formats
+- **Hook Bridging**: Translates between S&S hooks and Simple Calendar hook formats with full coverage (v0.3.0+)
 - **CSS/DOM Compatibility**: Dynamically adds all required Simple Calendar CSS classes and DOM structure
-- **Minimal Configuration**: Works automatically after installation
-- **Clean Architecture**: Separation of concerns between calendar and compatibility layers
+- **Zero Configuration**: Works automatically after installation
+- **Clean Architecture**: Complete separation of concerns between calendar and compatibility layers
 
 ## Supported Calendar Modules
 
@@ -30,15 +30,14 @@ The Simple Calendar Compatibility Bridge acts as a translation layer between mod
 
 This bridge enables the following modules to work with modern calendar systems:
 
-### ✅ **Tested & Supported**
+### ✅ **Fully Tested & Supported**
 - **SmallTime** - Time display widget with complete integration
-- **Simple Weather** - Weather system with core features working:
+- **Simple Weather** - Complete weather system with all features:
   - ✅ Sidebar button integration on calendar widgets
   - ✅ Weather data storage in calendar notes (when "Store weather in Simple Calendar notes" is enabled)
   - ✅ Season-based weather using calendar season information
   - ✅ All attachment modes (attached/detached to calendar)
-  - ⚠️ Basic sunrise/sunset times (6 AM/6 PM defaults)
-  - ⚠️ Simple season detection (month-range based)
+  - ✅ Complete hook support for weather events (v0.3.0+)
 
 ### 🔄 **Expected to Work**
 - **Calendar/Weather** - Advanced weather systems

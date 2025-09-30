@@ -142,25 +142,23 @@ When "Store weather in Simple Calendar notes" is enabled:
 
 ### Current Implementation Status
 
-#### ✅ **Implemented**
-- **Core Simple Weather Features**: Weather generation, persistence, UI integration
+#### ✅ **Fully Implemented** (v0.3.0+)
+- **Complete Simple Weather Features**: Weather generation, persistence, UI integration
+- **Full Hook Support**: All Simple Calendar hooks properly bridged for weather events
 - **Calendar Integration**: Date synchronization, season mapping, sidebar buttons
-- **Note Storage**: Complete weather history storage in calendar notes
+- **Note Storage**: Complete weather history storage in calendar notes with flag support
 - **Icon Constants**: Full season icon mapping for weather generation
+- **Weather Effects**: Scene integration, FX Master support, manual override capabilities
 
-#### ⚠️ **Basic Implementation**
-- **Sunrise/Sunset Times**: Currently returns default 6 AM/6 PM values
-  - Future enhancement: Calendar-specific astronomical calculations
-- **Season Detection**: Uses simple month-range matching
-  - Future enhancement: More sophisticated season calculation based on calendar rules
+#### 🔄 **Working with Defaults**
+- **Sunrise/Sunset Times**: Uses configurable defaults (6 AM/6 PM)
+  - Works correctly for Simple Weather's needs
+  - Can be customized via calendar module if needed
+- **Season Detection**: Uses calendar's built-in season information
+  - Properly maps calendar seasons to weather generation
 
-#### 📋 **Future Enhancements**
-- **Advanced Astronomical Data**: Proper sunrise/sunset calculation based on calendar date and location
-- **Sophisticated Season Logic**: Enhanced season detection with calendar-specific transition rules
-- **Weather Pattern Integration**: Calendar-aware weather patterns based on seasonal data
-
-:::note Implementation Notes
-The basic implementations are sufficient for Simple Weather's current functionality. All core features work correctly, with default values providing reasonable fallbacks where enhanced calculations aren't yet available.
+:::note Implementation Status
+As of v0.3.0, the bridge provides complete Simple Weather support. All features work as expected, including weather generation, persistence, hook support, and UI integration.
 :::
 
 ## Advanced Usage
