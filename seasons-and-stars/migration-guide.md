@@ -125,7 +125,7 @@ const ssDate = { year: 2024, month: 12, day: 25 }; // December 25th
 
 ### Feature Comparison
 
-#### ✅ **Available in Seasons & Stars (v0.16.0)**
+#### ✅ **Available in Seasons & Stars**
 - ✅ 16+ calendar systems including Roshar (Stormlight Archive)
 - ✅ Configurable quick time advancement controls
 - ✅ Play/pause time advancement with automatic combat pause
