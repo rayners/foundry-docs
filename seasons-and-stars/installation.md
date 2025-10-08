@@ -148,4 +148,4 @@ Now that Seasons & Stars is installed:
 3. **Try the GM time controls** if you're running a game
 4. **Check out the [ApplicationV2 Development Guide](applicationv2-development)** if you're interested in modern Foundry development
 
-Ready to enhance your game's timekeeping experience! 🕰️
+Seasons & Stars is now installed and ready to use.
