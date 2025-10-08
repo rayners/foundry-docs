@@ -8,16 +8,16 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 
 ## 🌟 Features
 
-### ✅ **Available Now (v0.16.0)**
-- **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
+### ✅ **Available Now (v0.20.0)**
+- **Modern UI**: Calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
-- **Configurable Quick Time Buttons**: Customizable time advancement buttons with live preview and dedicated mini widget controls
-- **Smart Mini Widget**: Optional time display, configurable day-of-week display, and dedicated quick time button configuration
-- **Play/Pause Time Advancement**: Time advancement controls with automatic combat pause
-- **Smart Year Navigation**: Click year to jump instantly instead of clicking arrows repeatedly
-- **Convenient Defaults**: Gregorian calendars can initialize with current date/time
-- **SmallTime Integration**: Seamless positioning and visual consistency. Time display intelligently hidden when SmallTime is present (configurable)
-- **16+ Available Calendars**: Core calendars plus calendar pack collections featuring D&D (Forgotten Realms, Eberron), Pathfinder (Golarion), Critical Role (Exandria), Roshar (Stormlight Archive), sci-fi calendars (Star Trek, Starfinder, Traveller), and custom formats
+- **Configurable Quick Time Buttons**: Time advancement buttons with live preview and mini widget controls
+- **Mini Widget Features**: Optional time display, day-of-week display, and quick time button configuration
+- **Play/Pause Time Advancement**: Time advancement controls with combat pause support
+- **Year Navigation**: Click year to jump to a specific year
+- **Default Date Initialization**: Gregorian calendars can initialize with current date/time
+- **SmallTime Integration**: Positioning and visual consistency with SmallTime module
+- **Multiple Calendars**: Core calendars plus calendar pack collections featuring D&D (Forgotten Realms, Eberron), Pathfinder (Golarion), Critical Role (Exandria), Roshar (Stormlight Archive), sci-fi calendars (Star Trek, Starfinder, Traveller), and custom formats
 - **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
 - **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
@@ -81,17 +81,17 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 
 ## 🎉 Recent Updates
 
-### **Current Release** (v0.16.0)
-- ✅ **JSON Schema Validation**: Calendar format validation system for reliable calendar data
+### **Current Release** (v0.20.0)
+- ✅ **JSON Schema Validation**: Calendar format validation system
 - ✅ **External Calendar Loading**: Hook system for modules to register calendars programmatically
 - ✅ **Calendar Pack Auto-Detection**: Automatic discovery of calendar modules with `seasons-and-stars-*` naming
-- ✅ **Dark Sun Calendar Updates**: Canon moon colors and cycles for authentic Dark Sun campaigns
+- ✅ **Dark Sun Calendar Updates**: Updated moon colors and cycles
 - ✅ **Module URL Protocol**: Support for `module:module-id` URL references in calendar loading
-- ✅ **SmallTime Integration Improvements**: Better detection and visual consistency
-- ✅ **Enhanced Error Handling**: Better logging and graceful failure recovery
-- ✅ **Input Validation**: API protection with helpful error messages
-- ✅ **TypeScript Support**: Type definitions for reliable development
-- ✅ **Testing**: Comprehensive test suite with reliable widget API coverage
+- ✅ **SmallTime Integration**: Detection and visual consistency with SmallTime module
+- ✅ **Error Handling**: Logging and error recovery
+- ✅ **Input Validation**: API protection with error messages
+- ✅ **TypeScript Support**: Type definitions for development
+- ✅ **Testing**: Test suite with widget API coverage
 
 ## 🗺️ Development Roadmap
 
@@ -123,4 +123,4 @@ See the complete [Roadmap](roadmap) for detailed timelines.
 
 ---
 
-**Ready to try a Foundry v13+ calendar solution?** Install Seasons & Stars today and experience the difference!
+**Ready to try a Foundry v13+ calendar solution?** Install Seasons & Stars today!

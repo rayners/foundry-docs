@@ -347,4 +347,4 @@ const scDate = SimpleCalendar.api.getCurrentDate();
 3. **Respect user calendar choices** in time calculations
 4. **Document calendar dependencies** clearly for users
 
-Seasons & Stars is designed to enhance your gaming experience with intuitive time management. Explore the features, customize to your preferences, and enjoy seamless calendar integration in your Foundry VTT games! 📅✨
+Seasons & Stars provides calendar and time management for Foundry VTT. Explore the features and customize to your preferences.
