@@ -8,16 +8,16 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 
 ## 🌟 Features
 
-### ✅ **Available Now (v0.16.0)**
+### ✅ **Available Now (v0.7.0)**
 - **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
-- **Configurable Quick Time Buttons**: Customizable time advancement buttons with live preview and dedicated mini widget controls
-- **Smart Mini Widget**: Optional time display, configurable day-of-week display, and dedicated quick time button configuration
-- **Play/Pause Time Advancement**: Time advancement controls with automatic combat pause
+- **Configurable Quick Time Buttons**: Customizable time advancement buttons with live preview
 - **Smart Year Navigation**: Click year to jump instantly instead of clicking arrows repeatedly
 - **Convenient Defaults**: Gregorian calendars can initialize with current date/time
 - **SmallTime Integration**: Seamless positioning and visual consistency. Time display intelligently hidden when SmallTime is present (configurable)
-- **16+ Available Calendars**: Core calendars plus calendar pack collections featuring D&D (Forgotten Realms, Eberron), Pathfinder (Golarion), Critical Role (Exandria), Roshar (Stormlight Archive), sci-fi calendars (Star Trek, Starfinder, Traveller), and custom formats
+- **16 Available Calendars**: Core calendars plus calendar pack collections featuring D&D (Forgotten Realms, Eberron), Pathfinder (Golarion), Critical Role (Exandria), sci-fi calendars (Star Trek, Starfinder, Traveller), and custom formats based on official game sources
+- **Calendar Pack Auto-Detection**: Automatically discovers and loads calendar modules following the `seasons-and-stars-*` naming convention
+- **External Calendar Registration**: Hook system allows modules to register calendars programmatically
 - **Notes System**: Create calendar notes with categories and tags (editing limited to basic journal interface)
 - **Simple Calendar Compatibility**: API compatibility via separate compatibility bridge module
 
@@ -81,17 +81,17 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 
 ## 🎉 Recent Updates
 
-### **Current Release** (v0.16.0)
+### **Current Release** (v0.7.0 - July 2025)
 - ✅ **JSON Schema Validation**: Calendar format validation system for reliable calendar data
 - ✅ **External Calendar Loading**: Hook system for modules to register calendars programmatically
 - ✅ **Calendar Pack Auto-Detection**: Automatic discovery of calendar modules with `seasons-and-stars-*` naming
-- ✅ **Dark Sun Calendar Updates**: Canon moon colors and cycles for authentic Dark Sun campaigns
+- ✅ **Dark Sun Calendar Updates**: Canon moon colors and cycles
 - ✅ **Module URL Protocol**: Support for `module:module-id` URL references in calendar loading
-- ✅ **SmallTime Integration Improvements**: Better detection and visual consistency
-- ✅ **Enhanced Error Handling**: Better logging and graceful failure recovery
-- ✅ **Input Validation**: API protection with helpful error messages
+- ✅ **Enhanced Date Formatting**: Handlebars-based templates with mathematical operations
+- ✅ **Calendar Variants System**: Cultural and regional calendar variations
+- ✅ **Moon Phase Tracking**: Basic lunar cycle tracking system
 - ✅ **TypeScript Support**: Type definitions for reliable development
-- ✅ **Testing**: Comprehensive test suite with reliable widget API coverage
+- ✅ **Comprehensive Testing**: Test suite covering core functionality
 
 ## 🗺️ Development Roadmap
 
