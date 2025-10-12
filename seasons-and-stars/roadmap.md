@@ -212,7 +212,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 
 ---
 
-## 🔮 Phase 4: Community & Ecosystem (Q3 2025)
+## 🔮 Phase 4: Community & Ecosystem (Future)
 *Ecosystem Expansion*
 
 ### Community Features 📋

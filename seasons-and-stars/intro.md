@@ -8,7 +8,7 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 
 ## 🌟 Features
 
-### ✅ **Available Now (v0.16.0)**
+### ✅ **Available Now (v0.7.0)**
 - **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
 - **Configurable Quick Time Buttons**: Customizable time advancement buttons with live preview and dedicated mini widget controls
@@ -81,17 +81,18 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 
 ## 🎉 Recent Updates
 
-### **Current Release** (v0.16.0)
+### **Current Release** (v0.7.0 - July 2025)
 - ✅ **JSON Schema Validation**: Calendar format validation system for reliable calendar data
 - ✅ **External Calendar Loading**: Hook system for modules to register calendars programmatically
 - ✅ **Calendar Pack Auto-Detection**: Automatic discovery of calendar modules with `seasons-and-stars-*` naming
 - ✅ **Dark Sun Calendar Updates**: Canon moon colors and cycles for authentic Dark Sun campaigns
 - ✅ **Module URL Protocol**: Support for `module:module-id` URL references in calendar loading
-- ✅ **SmallTime Integration Improvements**: Better detection and visual consistency
-- ✅ **Enhanced Error Handling**: Better logging and graceful failure recovery
-- ✅ **Input Validation**: API protection with helpful error messages
-- ✅ **TypeScript Support**: Type definitions for reliable development
-- ✅ **Testing**: Comprehensive test suite with reliable widget API coverage
+- ✅ **Date Formatting System**: Handlebars-based templates with mathematical operations
+- ✅ **Moon Phase Tracking**: Lunar cycle tracking for calendars
+- ✅ **Calendar Variants System**: Cultural and regional calendar variations
+- ✅ **Enhanced Error Handling**: Improved logging and graceful failure recovery
+- ✅ **TypeScript Support**: Type definitions for development
+- ✅ **Testing**: Test suite covering core functionality
 
 ## 🗺️ Development Roadmap
 
@@ -123,4 +124,4 @@ See the complete [Roadmap](roadmap) for detailed timelines.
 
 ---
 
-**Ready to try a Foundry v13+ calendar solution?** Install Seasons & Stars today and experience the difference!
+**Ready to try a Foundry v13+ calendar solution?** Install Seasons & Stars today!
