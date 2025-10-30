@@ -103,10 +103,10 @@ If you're migrating from Simple Calendar:
 
 ### Other Modules
 
-Seasons & Stars is designed to work with popular Foundry modules:
+Seasons & Stars is compatible with many Foundry modules:
 
 - ✅ **Foundry modules using the Simple Calendar API**
-- ✅ **Combat and time-tracking modules**  
+- ✅ **Combat and time-tracking modules**
 - ✅ **Weather and environment modules**
 - ✅ **Journey and travel modules**
 
