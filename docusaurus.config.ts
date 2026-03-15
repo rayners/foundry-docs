@@ -102,6 +102,16 @@ const config: Config = {
         editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'banelands',
+        path: 'banelands',
+        routeBasePath: 'banelands',
+        sidebarPath: './sidebars-banelands.ts',
+        editUrl: 'https://github.com/rayners/foundry-docs/tree/main/',
+      },
+    ],
   ],
 
   presets: [
@@ -177,6 +187,13 @@ const config: Config = {
           docsPluginId: 'familiar',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'banelandsSidebar',
+          position: 'left',
+          label: 'BaneLands',
+          docsPluginId: 'banelands',
+        },
+        {
           href: 'https://github.com/rayners',
           label: 'GitHub',
           position: 'right',
@@ -216,6 +233,10 @@ const config: Config = {
             {
               label: 'Foundry Familiar',
               to: '/familiar/intro',
+            },
+            {
+              label: 'BaneLands',
+              to: '/banelands/intro',
             },
           ],
         },
