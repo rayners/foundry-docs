@@ -39,7 +39,7 @@ A comprehensive guide for migrating from Simple Calendar to Seasons & Stars, cov
 - Simple Calendar API compatibility
 - Basic weather module support
 
-#### **Phase 2** 🚧 *Q3-Q4 2025*
+#### **Phase 2** 🚧 *Next*
 - Calendar editor and creation tools
 - Simple Calendar import and migration assistant
 - Enhanced calendar validation and customization
@@ -125,16 +125,20 @@ const ssDate = { year: 2024, month: 12, day: 25 }; // December 25th
 
 ### Feature Comparison
 
-#### ✅ **Available in Seasons & Stars (v0.16.0)**
-- ✅ 16+ calendar systems including Roshar (Stormlight Archive)
+#### ✅ **Available in Seasons & Stars (Current)**
+- ✅ Calendar packs with optional fantasy and sci-fi collections
+- ✅ Calendar variants system for cultural and regional variations
+- ✅ Moon phase tracking with multi-moon support
+- ✅ Advanced date formatting with Handlebars templates
 - ✅ Configurable quick time advancement controls
-- ✅ Play/pause time advancement with automatic combat pause
-- ✅ Enhanced mini widget with time display and day-of-week options
+- ✅ Real-time time advancement with pause/resume controls
+- ✅ Enhanced mini widget with customizable display options and drag-and-drop positioning
 - ✅ Smart year navigation (click to jump instantly)
 - ✅ SmallTime integration with intelligent positioning
 - ✅ Basic notes creation (editing via journal interface)
-- ✅ Simple Calendar API compatibility
+- ✅ Simple Calendar API compatibility via separate bridge module
 - ✅ Calendar pack auto-detection system
+- ✅ External calendar loading hook system
 
 #### 🚧 **Coming Soon (Phase 2)**
 - 🚧 Calendar import/creation tools
