@@ -402,7 +402,7 @@ Hooks.on('seasons-stars:ready', (data) => {
 });
 ```
 
-#### `seasons-stars:registerExternalCalendars` (Added in v0.8.0)
+#### `seasons-stars:registerExternalCalendars` (Added in v0.7.0)
 
 Fired during initialization to allow modules to register calendars programmatically. This provides an alternative to calendar packs for dynamic calendar registration.
 

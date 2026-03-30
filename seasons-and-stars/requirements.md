@@ -101,7 +101,7 @@ When using multiple modules:
 - ✅ **D&D 5e**: Complete integration
 - ✅ **Pathfinder 2e**: Full calendar support
 - ✅ **World Building**: Designed for custom settings
-- ✅ **Simple Worldbuilding**: Perfect for homebrew
+- ✅ **Simple Worldbuilding**: Good for homebrew settings
 
 ### Tested Systems
 - ✅ **Forbidden Lands**: Calendar integration tested
