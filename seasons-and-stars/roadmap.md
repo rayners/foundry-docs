@@ -17,7 +17,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 ## 📅 Development Phases
 
 ## ✅ Phase 1: Foundation (Complete)
-*Beta Release - Q4 2024*
+*Beta Release - Completed*
 
 ### Core Features ✅
 - [x] **Modern Calendar System**
@@ -67,7 +67,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 
 ---
 
-## ✅ Phase 2: Core Integration (Q4 2024 - COMPLETE)
+## ✅ Phase 2: Core Integration (Complete)
 *Enhanced Compatibility Release*
 
 ### Notes System (Basic) ✅
@@ -120,7 +120,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 
 ## 🚧 Next Development Phases
 
-### **v0.3.0 - Enhanced Widget Features** (Ready for Release)
+### **v0.8.0 - Enhanced Widget Features** (Next Release)
 
 **Focus**: Widget customization and interaction improvements
 
@@ -129,7 +129,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 - **Enhanced Widget Controls**: Standardized button styling and improved visual consistency
 - **Settings Preview**: Live preview of button configurations in module settings
 
-### **v0.4.0 - Performance and Moon Tracking** (Next Release)
+### **v0.9.0 - Performance and Moon Tracking** (Planned)
 
 **Focus**: Performance optimization and lunar cycle features
 
@@ -138,7 +138,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 - **Performance Optimization**: Reduced memory usage and faster module initialization
 - **Calendar System Enhancement**: Better error handling and validation for calendar definitions
 
-### **v0.5.0 - Notes System Enhancement** (Next Priority)
+### **v1.0.0 - Notes System Enhancement** (Future)
 
 **Focus**: Complete the calendar-aware notes editing system
 
@@ -147,7 +147,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 - **Enhanced Note Browser**: Dedicated interface for browsing and searching calendar notes with metadata filtering
 - **Advanced Notes Features**: Enhanced search UI, bulk operations, and note templates
 
-### **v0.6.0 - Calendar Creation and Import System** (Future)
+### **v1.1.0 - Calendar Creation and Import System** (Future)
 
 **Focus**: Calendar creation and migration tools
 
@@ -156,7 +156,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 - **Calendar Validation**: Built-in validation for custom calendar definitions
 - **Migration Wizard**: Step-by-step guide for Simple Calendar users
 
-### **v0.7.0 - Enhanced Module Integration** (Future)
+### **v1.2.0 - Enhanced Module Integration** (Future)
 
 **Focus**: Deeper integration with the Foundry ecosystem
 
@@ -167,7 +167,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 - **UI/UX Improvements**: Enhanced widget interfaces and user experience refinements
 - **Date Context Menus**: Right-click context menus for calendar dates with additional actions and information
 
-### **v1.0.0 - Stable Release** (Future)
+### **v2.0.0 - Major Feature Release** (Future 2026)
 
 **Focus**: Production stability and feature completeness
 
@@ -212,7 +212,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 
 ---
 
-## 🔮 Phase 4: Community & Ecosystem (Q3 2025)
+## 🔮 Phase 4: Community & Ecosystem (2026)
 *Ecosystem Expansion*
 
 ### Community Features 📋
@@ -284,7 +284,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 - [x] **Basic Notes System**: Note creation with categories and tags (editing limited to basic journal interface)
 - [x] **Weather Module Support**: Verified Simple Weather integration
 - [x] **Enhanced API**: Complete widget and hook systems
-- [ ] **Complete Notes Editing**: Calendar-aware note editing interface for metadata management (disabled pending implementation)
+- [ ] **Complete Notes Editing**: Calendar-aware note editing interface for metadata management (planned for future release)
 - [x] **Documentation Quality**: Comprehensive API and developer guides
 - [x] **Performance Optimization**: Efficient handling of large note collections
 
