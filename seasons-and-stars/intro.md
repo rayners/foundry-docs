@@ -8,7 +8,7 @@ A calendar and timekeeping module for Foundry VTT v13+ with clean architecture a
 
 ## 🌟 Features
 
-### ✅ **Available Now (v0.16.0)**
+### ✅ **Available Now (v0.25.0)**
 - **Modern UI**: Clean, responsive calendar interface with ApplicationV2 architecture
 - **Multiple Calendar Views**: Full calendar widget, compact mini widget, and monthly grid view
 - **Configurable Quick Time Buttons**: Customizable time advancement buttons with live preview and dedicated mini widget controls
@@ -81,7 +81,7 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, (data) => {
 
 ## 🎉 Recent Updates
 
-### **Current Release** (v0.16.0)
+### **Current Release** (v0.25.0)
 - ✅ **JSON Schema Validation**: Calendar format validation system for reliable calendar data
 - ✅ **External Calendar Loading**: Hook system for modules to register calendars programmatically
 - ✅ **Calendar Pack Auto-Detection**: Automatic discovery of calendar modules with `seasons-and-stars-*` naming
