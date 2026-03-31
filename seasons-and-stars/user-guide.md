@@ -117,7 +117,7 @@ Each calendar shows:
 - Standard Earth calendar with 12 months
 - Leap year support (February 29th every 4 years)
 - Familiar month and day names
-- Perfect for modern or historical Earth settings
+- Suitable for modern or historical Earth settings
 
 ### Fantasy Calendars
 
@@ -125,7 +125,7 @@ Each calendar shows:
 - Based on Brandon Sanderson's Stormlight Archive series
 - 10 months of 50 days each (500-day year)
 - Unique Vorin calendar system with cultural context
-- Perfect for campaigns in the Stormlight Archive setting
+- Suitable for campaigns in the Stormlight Archive setting
 
 **Vale Reckoning** (Example Fantasy Calendar)
 - Custom month names reflecting fantasy world
