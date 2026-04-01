@@ -17,7 +17,7 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 ## 📅 Development Phases
 
 ## ✅ Phase 1: Foundation (Complete)
-*Beta Release - Q4 2024*
+*Released Q4 2024*
 
 ### Core Features ✅
 - [x] **Modern Calendar System**
@@ -67,8 +67,8 @@ Seasons & Stars aims to be a **reliable and extensible** calendar solution for F
 
 ---
 
-## ✅ Phase 2: Core Integration (Q4 2024 - COMPLETE)
-*Enhanced Compatibility Release*
+## ✅ Phase 2: Core Integration (COMPLETE)
+*Enhanced Compatibility - Released July 2025 (v0.7.0)*
 
 ### Notes System (Basic) ✅
 - [x] **Basic Notes Implementation**
