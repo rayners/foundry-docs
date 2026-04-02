@@ -34,7 +34,7 @@ First, install your preferred calendar module:
 
 1. Open Foundry VTT's Add-on Modules tab
 2. Search for "Simple Calendar Compatibility Bridge"
-3. Click Install
+3. Click Install (ensure v0.3.0 or later for full hook support)
 4. Activate the module in your world
 
 :::warning Important

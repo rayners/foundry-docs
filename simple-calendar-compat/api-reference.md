@@ -5,7 +5,7 @@ title: API Reference
 
 # API Reference
 
-The Simple Calendar Compatibility Bridge implements most of the Simple Calendar API, providing compatibility for modules that depend on Simple Calendar.
+The Simple Calendar Compatibility Bridge implements the complete Simple Calendar API (v0.3.0+), providing full compatibility for modules that depend on Simple Calendar.
 
 ## Core Time Methods
 
@@ -208,7 +208,9 @@ Hooks.on('simple-calendar-clock-start-stop', (data) => {
 });
 ```
 
-### Hook Names Object
+### Complete Hook Support (v0.3.0+)
+
+All Simple Calendar hooks are fully implemented and bridged:
 
 ```javascript
 const hookNames = SimpleCalendar.Hooks;
@@ -216,7 +218,15 @@ const hookNames = SimpleCalendar.Hooks;
 // - DateTimeChange: 'simple-calendar-date-time-change'
 // - Init: 'simple-calendar-init'
 // - ClockStartStop: 'simple-calendar-clock-start-stop'
+// - PrimaryGM: 'simple-calendar-primary-gm'
+// - Ready: 'simple-calendar-ready'
 ```
+
+Additional hooks fired for compatibility:
+- `'simple-calendar-date-change'` - Fired on date changes
+- `'simple-calendar-time-change'` - Fired on time changes
+- `'simple-calendar-year-change'` - Fired on year changes
+- `'simple-calendar-month-change'` - Fired on month changes
 
 ## Clock Control
 
